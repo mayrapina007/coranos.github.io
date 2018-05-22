@@ -4,7 +4,7 @@ const height = 200;
 
 const scale = 2;
 
-const interpolate_step = 5;
+const max_interpolate_step = 5;
 
 /**
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
@@ -66,6 +66,8 @@ function makeGameSvg(rootSelector, bananoJson, rotation, breakHamiltonianCycle) 
       const slice = [];
       slice.push({'x':dx1,'y':dy1});
       
+      const interpolate_step = max_interpolate_step-1+ getRandomInt(1);
+      
       if(dx < 0) {
         dx1 -= interpolate_step;
       }
@@ -78,8 +80,6 @@ function makeGameSvg(rootSelector, bananoJson, rotation, breakHamiltonianCycle) 
       if(dy > 0) {
         dy1 += interpolate_step;
       }
-      
-      slice.push({'x':dx1,'y':dy1});
 
       let append = true;
       if((!check()) && breakHamiltonianCycle) {
@@ -89,11 +89,30 @@ function makeGameSvg(rootSelector, bananoJson, rotation, breakHamiltonianCycle) 
       }
       
       if(append) {
-        svg.append('path')
-          .attr('d', lineFunction(slice))
-          .attr('stroke', "brown")
-          .attr('stroke-width', 2);
+        slice.push({'x':dx1,'y':dy1});
+      } else {
+        let dx2 = dx1;
+        let dy2 = dy1;
+        if(dx < 0) {
+          dx2 += (interpolate_step/2);
+        }
+        if(dx > 0) {
+          dx2 -= (interpolate_step/2);
+        }
+        if(dy < 0) {
+          dy2 += (interpolate_step/2);
+        }
+        if(dy > 0) {
+          dy2 -= (interpolate_step/2);
+        }
+        slice.push({'x':dx2,'y':dy2});
       }
+      
+        
+      svg.append('path')
+      .attr('d', lineFunction(slice))
+      .attr('stroke', "brown")
+      .attr('stroke-width', 2);
     }
   }
 }
