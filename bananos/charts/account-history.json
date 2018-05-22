@@ -26117,7 +26117,7 @@
     "ix": "3731"
   },
   {
-    "legacy": true,
+    "legacy": false,
     "balance": "1611292734",
     "history": {},
     "account": "ban_1fundm3d7zritekc8bdt4oto5ut8begz6jnnt7n3tdxzjq3t46aiuse1h7gj",
@@ -28028,7 +28028,7 @@
     "ix": "4004"
   },
   {
-    "legacy": true,
+    "legacy": false,
     "balance": "0",
     "history": {},
     "account": "ban_1gucci8w5u8e764n3tc9ryajac485q7cz83jw9yjoamo5iiqn95s7fxmxmnp",
@@ -72457,7 +72457,7 @@
     "ix": "10351"
   },
   {
-    "legacy": true,
+    "legacy": false,
     "balance": "1575411834",
     "history": {},
     "account": "ban_3fundbxxzrzfy3k9jbnnq8d44uhu5sug9rkh135bzqncyy9dw91dcrjg67wf",
@@ -92400,7 +92400,7 @@
     "ix": "13200"
   },
   {
-    "legacy": true,
+    "legacy": false,
     "balance": "788",
     "history": {},
     "account": "ban_3wrkfh4jt63i19t8nas1otemksxiw71rop53wi891qxprunhwaz5o8zbsxcg",
