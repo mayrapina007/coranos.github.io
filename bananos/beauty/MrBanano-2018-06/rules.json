@@ -1,4 +1,4 @@
-{
+﻿{
 	"guidelines": [
 		{
 			"title": {
@@ -10,7 +10,7 @@
 		{
 			"en": "Use good lighting. Not too dark or too bright.",
 			"es": "Use buena luz. No muy oscuro ni muy brillante.",
-			"pt": "Use uma iluminaÁ„o boa. Nem muito escuro nem claro demais.",
+			"pt": "Use uma iluminação boa. Nem muito escuro nem claro demais.",
 			"img": "https://i.pinimg.com/originals/e9/5a/16/e95a162ee2a5a28f332c957b2efb14b9.jpg"
 		},
 		{
@@ -22,7 +22,7 @@
 		{
 			"en": "Look at the previous contestants and the internet to get good ideas.",
 			"es": "Mire a los participantes previos y la internet para obtener ideas.",
-			"pt": "DÍ uma olhada nos concorrentes e pela internet para ter boas idÈias.",
+			"pt": "Dê uma olhada nos concorrentes e pela internet para ter boas idéias.",
 			"img": "https://i.pinimg.com/originals/49/1c/53/491c53e51ec33b443337ae50c106c251.jpg"
 		}
 	],
@@ -49,13 +49,13 @@
 		{
 			"en": "All photos and videos must be legal, and you agree the contest can use them for the contest, visible to the public (not just to judges).",
 			"es": "Todas las fotos y videos tienen que ser legales, y accede a que el concurso los use y sean visibles para el público (no sólo para los jueces).",
-			"pt": "Todas as fotos e vÌdeos devem ser legais e vocÍ concorda que o concurso use-os para divulgaÁ„o p˙blica.",
+			"pt": "Todas as fotos e vídeos devem ser legais e você concorda que o concurso use-os para divulgação pública.",
 			"img": "http://i0.kym-cdn.com/entries/icons/original/000/024/187/hitler.jpg"
 		},
 		{
 			"en": "No Full Nudity. Partial nudity is acceptable.",
 			"es": "Sin desnudez completa. Desnudez parcial es aceptable.",
-			"pt": "Sem nudez total. Nudez parcial È aceit·vel.",
+			"pt": "Sem nudez total. Nudez parcial é aceitável.",
 			"img": "https://media.gettyimages.com/photos/no-nudity-sign-on-cala-xarraca-beach-picture-id520282646"
 		},
 		{
@@ -79,13 +79,13 @@
 		{
 			"en": "If you are actually a professional photographer taking a photo of yourself, then that is ok.",
 			"es": "Si usted es un fotógrafo profesional tomando una foto de si mismo, entonces sí está bien.",
-			"pt": "Se vocÍ È um fotÛgrafo profissional de verdade tirando uma foto de vocÍ mesmo ent„o tudo bem.",
+			"pt": "Se você é um fotógrafo profissional de verdade tirando uma foto de você mesmo ent„o tudo bem.",
 			"img": "https://cms-assets.tutsplus.com/uploads/users/80/posts/26806/image/70-Selfies.jpg"
 		},
 		{
 			"en": "Avoid including anything that would help someone harrass you, like your street address.",
 			"es": "Evite incluir cualquier cosa que pueda permitir a otros acosarle, como su dirección de casa, etc.",
-			"pt": "Evite incluir qualquer coisa que ajude alguÈm a perseguÌ-lo, como a rua de sua residÍncia.",
+			"pt": "Evite incluir qualquer coisa que ajude alguÈm a perseguÌ-lo, como a rua de sua residência.",
 			"img": "https://psimonmyway.com/wp-content/uploads/2017/04/16908419_426302601048263_6690234285980385280_n-1024x700.jpg"
 		}
 	],
@@ -105,7 +105,7 @@
 		{
 			"en": "There will be a grace period for six hours after the deadline, due to unreliable internet and power in some areas.",
 			"es": "Habrá un periodo de gracia de seis horas después del limite de horario, debido a conexión de internet poco confiable y cortes de luz en algunas áreas.",
-			"pt": "Haver· um perÌodo de toler‚ncia de seis horas depois do hor·rio limite devido a internet e luz inst·vel em algumas regiıes."
+			"pt": "Haver· um período de tolerância de seis horas depois do horário limite devido a internet e luz instável em algumas regiões."
 		},
 		{
 			"en": "New registrations will not be taken during the grace period, so register early!",
@@ -120,7 +120,7 @@
 		{
 			"en": "New submissions will be taken during the grace period, but cannot win first place.",
 			"es": "Nuevos envios (banano foto, video) serán aceptados durante el periodo de gracia, pero no podrán ganar el primer lugar.",
-			"pt": "Novos envios (banano foto, vÌdeo) ser„o aceitos no perÌodo de toler‚ncia, mas n„o poder„o ganhar o primeiro lugar."
+			"pt": "Novos envios (banano foto, vídeo) serão aceitos no período de tolerância, mas não poderão ganhar o primeiro lugar."
 		}
 	],
 	"payouts": [
@@ -134,7 +134,7 @@
 		{
 			"en": "Judges will rank all contestants that pass verification (If your image is not on here, you did not pass verification).",
 			"es": "Los jurados van a clasificar a todos los concursantes que pasen la verificación (Si su imágen no está aquí, usted no pasó la verificación).",
-			"pt": "Os jurados v„o classificar todos concorrentes que passem pela verificação (Se sua imagem n„o est· aqui, vocÍ n„o se qualificou na verificação)."
+			"pt": "Os jurados vão classificar todos concorrentes que passem pela verificação (Se sua imagem não está aqui, você não se qualificou na verificação)."
 		},
 		{
 			"en": "Winners will be determined by Instant Runoff Voting.",
@@ -144,7 +144,7 @@
 		{
 			"en": "50% of the pot is first prize, 25% second prize, 12.5% third prize, and then all participants share the remaining 12.5%.",
 			"es": "50% del pote lo gana el primer lugar, 25% para el segundo lugar, 12.5% para el tercer lugar, y entre todos los participantes se repartirá el remanente 12.5%.",
-			"pt": "50% do total arrecadado È do primeiro lugar, 25% do segundo lugar, 12,5% terceiro lugar, e ent„o todos os outros participantes compartilhar„o os 12,5% restantes."
+			"pt": "50% do total arrecadado é do primeiro lugar, 25% do segundo lugar, 12,5% terceiro lugar, e ent„o todos os outros participantes compartilhar„o os 12,5% restantes."
 		},
 		{
 			"en": "The judge's votes will be published publicly for verification.",
@@ -172,10 +172,10 @@
 				{
 					"en": "The contest will consist of one verification image, one (optional) banano image, and one (optional) video.",
 					"es": "El concurso consistirá en una imágen de identificación, una (opcional) con bananas y un video (opcional).",
-					"pt": "O concurso consistir· de uma imagem de identificaÁ„o, uma (opcional) imagem com bananas e um (opcional) vÌdeo."
+					"pt": "O concurso consistirá de uma imagem de identificação, uma (opcional) imagem com bananas e um (opcional) vÌdeo."
 				},
 				{
-					"en": "Please try to post the images on https://imgur.com/ and link to them. If you are not comfortable using your personal account, Coranos can host them for you.",
+					"en": "Please try to post the images on https://imgur.com/ and link to them.",
 					"es": "Por favor trate de subir sus imágenes a https://imgur.com/ y envie un link de ellas. Si no se siente cómodo alojándolas en su cuenta personal, Coranos puede subirlas a su página.",
 					"pt": "Por favor, tente postar as imagens no site https://imgur.com/ e link elas."
 				},
@@ -195,13 +195,13 @@
 					"title": {
 						"en": "Image One - Identification (Required, Must Submit Before Deadline)",
 						"es": "Imagen 1 - Identificación (Obligatoria, Debe ser enviada antes del plazo límite)",
-						"pt": "Imagem UM: IdentificaÁ„o (ObrigatÛrio, Deve ser enviada ANTES do hor·rio limite)"
+						"pt": "Imagem UM: Identificação (Obrigatório, Deve ser enviada ANTES do horário limite)"
 					}
 				},
 				{
 					"en": "The first image will be the contestant holding a white sign with their discord name on it. Your face and your discord ID must be visible.",
 					"es": "La primera imágen será del participante sosteniendo un cartel/papel blanco con su nombre de discord en el. El rostro y nombre de discord (discord ID) tienen que ser visibles.",
-					"pt": "A primeira imagem tem de ser o participante segurando um suporte/papel branco (ou tabela, quadro) com seu apelido no Discord escrito nele (com o n˙mero). Seu rosto e Discord ID devem estar visÌveis."
+					"pt": "A primeira imagem tem de ser o participante segurando um suporte/papel branco (ou tabela, quadro) com seu apelido no Discord escrito nele (com o número). Seu rosto e Discord ID devem estar visíveis."
 				}
 			],
 			"bananos": [
@@ -223,7 +223,7 @@
 					"title": {
 						"en": "Video: Your Strength (Optional, Must Submit Before Grace Period is over)",
 						"es": "Video: Tu fortaleza (Opcional, Debe ser enviado antes que el periodo de gracia acabe)",
-						"pt": "VÌdeo: Sua ForÁa (Opcional, Deve ser enviado antes que o perÌodo de toler‚ncia acabe)"
+						"pt": "Vídeo: Sua Força (Opcional, Deve ser enviado antes que o perÌodo de toler‚ncia acabe)"
 					}
 				},
 				{
