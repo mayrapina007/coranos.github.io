@@ -2,7 +2,7 @@ const width = 150;
 
 const height = 150;
 
-const scale = 1.5;
+const max_scale = 1.5;
 
 const max_interpolate_step = 4;
 
@@ -37,7 +37,9 @@ function getRandomInt (max) {
 
 function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianCycle) {
   const rootSelector = options.gameSelector;
+
   
+  const scale = (max_scale - 0.5) + (getRandomInt(5) / 10.0);
   // copy and jiggle the json
   const bananoJson = [];
   bananoJson.push({});
@@ -55,8 +57,15 @@ function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianC
   bananoJson[0].x = bananoJson[bananoJson.length-1].x;
   bananoJson[0].y = bananoJson[bananoJson.length-1].y;
 
+  const label =  d3.select(rootSelector)
+  .append('label')
   
-  const svg = d3.select(rootSelector)
+  label
+    .append('input')
+    .attr('type', 'submit')
+    .attr('value', gameIx);
+  
+  const svg = label
     .append('svg')
     .attr('width', width)
     .attr('height', height);
@@ -114,6 +123,11 @@ function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianC
       if(dx > 0) {
         dx1 += interpolate_step;
       }
+      
+      if(dx1*dx > x1*dx) {
+        dx1 = x1;
+      }
+      
       if(dy < 0) {
         dy1 -= interpolate_step;
       }
@@ -121,6 +135,11 @@ function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianC
         dy1 += interpolate_step;
       }
 
+      if(dy1*dy > y1*dy) {
+        dy1 = y1;
+      }
+
+      
       let append = true;
       if((!check()) && breakHamiltonianCycle) {
         if(bananoJsonIx == breakIx) {
