@@ -14,10 +14,12 @@
     <tr>
       <th class="solid_border centered_text">Good</th>
       <th class="solid_border centered_text">Bad</th>
+      <th class="solid_border centered_text">Total</th>
     </tr>
     <tr>
       <td class="solid_border centered_text" id="goodScore">0</td>
       <td class="solid_border centered_text" id="badScore">0</td>
+      <td class="solid_border centered_text" id="totalScore">0</td>
     </tr>
   </table>
   <div id="game"></div>
@@ -30,6 +32,7 @@
           'gameSelector' : '#game',
           'goodScoreSelector' : '#goodScore',
           'badScoreSelector' : '#badScore',
+          'totalScoreSelector' : '#totalScore',
           'numberOfGames' : 16
         };
         makeGame(options);

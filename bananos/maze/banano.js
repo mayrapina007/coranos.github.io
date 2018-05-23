@@ -19,8 +19,10 @@ function updateScore(ix, options) {
   } else {
     badScore++;
   }
+  const totalScore = goodScore-badScore;
   d3.select(options.goodScoreSelector).html(goodScore);
   d3.select(options.badScoreSelector).html(badScore);
+  d3.select(options.totalScoreSelector).html(totalScore);
   makeGame(options);
 }
 
