@@ -111,21 +111,17 @@ function makeGameSvg(gameIx, options, bananoJson, rotation, breakHamiltonianCycl
       if(append) {
         slice.push({'x':dx1,'y':dy1});
       } else {
-        let dx2 = dx1;
-        let dy2 = dy1;
-        if(dx < 0) {
-          dx2 += (interpolate_step/2);
-        }
-        if(dx > 0) {
-          dx2 -= (interpolate_step/2);
-        }
-        if(dy < 0) {
-          dy2 += (interpolate_step/2);
-        }
-        if(dy > 0) {
-          dy2 -= (interpolate_step/2);
-        }
-        slice.push({'x':dx2,'y':dy2});
+        const start = (bananoJsonIx+1) % (bananoJson.length-1);
+        // console.log('start',start,'bananoJsonIx',bananoJsonIx,'bananoJson.length',bananoJson.length);
+        
+        const p2 = bananoJson.slice(start,start+1)[0];
+
+        const p2x = p2.x;
+        const p2y = p2.y;
+        // console.log('p2',JSON.stringify(p2));
+        // console.log('p2x',p2x,'p2y',p2y,'scale',scale);
+        slice.push({'x':p2x * scale,'y':p2y * scale});
+        // console.log('slice',JSON.stringify(slice));
       }
       
         
