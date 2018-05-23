@@ -39,7 +39,8 @@ function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianC
   const rootSelector = options.gameSelector;
 
   
-  const scale = (max_scale - 0.5) + (getRandomInt(5) / 10.0);
+  const scale = (max_scale - 0.0) + (getRandomInt(2) / 10.0);
+  const strokeWidth = scale / 2;
   // copy and jiggle the json
   const bananoJson = [];
   bananoJson.push({});
@@ -77,7 +78,7 @@ function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianC
     .attr('width', width-1)
     .style('stroke', 'black')
     .style('fill', 'none')
-    .style('stroke-width', '1');
+    .style('stroke-width', strokeWidth);
   
   const lineFunction = d3.line()
     .x(function(d) { return d.x; })
