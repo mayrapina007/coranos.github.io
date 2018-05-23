@@ -1,10 +1,10 @@
-const width = 200;
+const width = 150;
 
-const height = 200;
+const height = 150;
 
-const scale = 2;
+const scale = 1.5;
 
-const max_interpolate_step = 5;
+const max_interpolate_step = 4;
 
 let goodScore = 0;
 let badScore = 0;
@@ -35,8 +35,26 @@ function getRandomInt (max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function makeGameSvg(gameIx, options, bananoJson, rotation, breakHamiltonianCycle) {
+function makeGameSvg(gameIx, options, rawBananoJson, rotation, breakHamiltonianCycle) {
   const rootSelector = options.gameSelector;
+  
+  // copy and jiggle the json
+  const bananoJson = [];
+  bananoJson.push({});
+  
+  const offsetX = getRandomInt(20) - 10;
+  const offsetY = getRandomInt(20) - 10;
+  
+  for(let bananoJsonIx = 1; bananoJsonIx < rawBananoJson.length; bananoJsonIx++) {
+    bananoJson.push({});
+    bananoJson[bananoJsonIx].x = rawBananoJson[bananoJsonIx].x;
+    bananoJson[bananoJsonIx].y = rawBananoJson[bananoJsonIx].y;
+    bananoJson[bananoJsonIx].x += offsetX;
+    bananoJson[bananoJsonIx].y += offsetY;
+  }
+  bananoJson[0].x = bananoJson[bananoJson.length-1].x;
+  bananoJson[0].y = bananoJson[bananoJson.length-1].y;
+
   
   const svg = d3.select(rootSelector)
     .append('svg')
@@ -57,7 +75,7 @@ function makeGameSvg(gameIx, options, bananoJson, rotation, breakHamiltonianCycl
     .y(function(d) { return d.y; })
   
   const breakIx = 1+ getRandomInt(bananoJson.length-1);
-  
+    
   for(let bananoJsonIx = 1; bananoJsonIx < bananoJson.length; bananoJsonIx++) {
     const bananoJsonIx0 = bananoJsonIx-1;
     const bananoJsonIx1 = bananoJsonIx+1;
@@ -156,6 +174,8 @@ function makeGame(options) {
   d3.select(options.gameSelector).html('');
   
   const numberOfGames = options.numberOfGames;
+  d3.select(options.gameSelector).style('width',width*Math.sqrt(numberOfGames));
+
   $.ajaxSetup({
     beforeSend : function (xhr) {
       if (xhr.overrideMimeType) {
