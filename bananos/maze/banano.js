@@ -6,6 +6,24 @@ const scale = 2;
 
 const max_interpolate_step = 5;
 
+let goodScore = 0;
+let badScore = 0;
+let goodIx = undefined;
+
+function updateScore(ix, options) {
+  if(goodIx == undefined) {
+    return;
+  }
+  if(ix == goodIx) {
+    goodScore++;
+  } else {
+    badScore++;
+  }
+  d3.select(options.goodScoreSelector).html(goodScore);
+  d3.select(options.badScoreSelector).html(badScore);
+  makeGame(options);
+}
+
 /**
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
  * 
@@ -15,7 +33,9 @@ function getRandomInt (max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function makeGameSvg(rootSelector, bananoJson, rotation, breakHamiltonianCycle) {
+function makeGameSvg(gameIx, options, bananoJson, rotation, breakHamiltonianCycle) {
+  const rootSelector = options.gameSelector;
+  
   const svg = d3.select(rootSelector)
     .append('svg')
     .attr('width', width)
@@ -115,9 +135,29 @@ function makeGameSvg(rootSelector, bananoJson, rotation, breakHamiltonianCycle) 
       .attr('stroke-width', 2);
     }
   }
+  
+  // add clickable
+
+
+  svg.append('rect')
+  .attr('x', 1)
+  .attr('y', 1)
+  .attr('height', height-1)
+  .attr('width', width-1)
+  .attr('pointer-events', "visible")
+  .style('stroke', 'red')
+  .style('fill', 'none')
+  .style('stroke-width', '1')
+  .on("click", function(){
+    updateScore(gameIx, options);
+    d3.event.stopPropagation();
+  });
 }
 
-function makeGame(rootSelector, numberOfGames) {
+function makeGame(options) {
+  d3.select(options.gameSelector).html('');
+  
+  const numberOfGames = options.numberOfGames;
   $.ajaxSetup({
     beforeSend : function (xhr) {
       if (xhr.overrideMimeType) {
@@ -128,11 +168,12 @@ function makeGame(rootSelector, numberOfGames) {
 
   $.getJSON('banano.json', function (bananoJson) {
     const realIx = getRandomInt(numberOfGames);
+    goodIx = realIx;
 
     for (let gameIx = 0; gameIx < numberOfGames; gameIx++) {
       const breakHamiltonianCycle = !(gameIx == realIx);
       const rotation = (2.0 * Math.PI) / ((gameIx * 1.0) / numberOfGames);
-      makeGameSvg(rootSelector, bananoJson, rotation, breakHamiltonianCycle);
+      makeGameSvg(gameIx, options, bananoJson, rotation, breakHamiltonianCycle);
     }
   });
 }
