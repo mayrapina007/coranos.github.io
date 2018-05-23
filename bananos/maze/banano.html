@@ -9,6 +9,8 @@
 <body onload="onLoad();">
   <p>Objective: Make a game that shows two graphs, each of which is a undirected planar graph of maximum degree three.</p>
   <p>One graph will contain a hamiltonian cycle that forms the picture of a banana.</p>
+  <p>We discovered that a banana with a spike is not really sufficient, you need to have a banana with one spike that is another banana, and a second spike
+    that is not a banana.</p>
   <p>The other graph will not contain a hamiltonian cycle.</p>
   <table>
     <tr>
@@ -22,7 +24,7 @@
       <td class="solid_border centered_text" id="totalScore">0</td>
     </tr>
   </table>
-  <div style="width:800;height:800;" id="game"></div>
+  <div style="width: 800; height: 800;" id="game"></div>
   <script src='../../js-lib/jquery-3.2.1.js'></script>
   <script src="../../js-lib/d3-4.6.0.js"></script>
   <script src='banano.js'></script>
