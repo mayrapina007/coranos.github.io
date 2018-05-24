@@ -73,14 +73,22 @@
     <li>If there is still not a majority winner due to ties, reset the elimination votes, and combine the next lower rank's votes with the top rank (I.E.
       if the votes in Rank 1 are : {A:3,B:3,C:2}, you eliminate C, and get {A:4,B:4}, reset to {A:3,B:3,C:2} and pull in rank 2.)</li>
   </ol>
-
+  <h2>contestantTable</h2>
   <table id='contestantTable' class='solid_border' style="width: 100%">
     <thead class='solid_border'>
     </thead>
     <tbody class='solid_border'>
     </tbody>
   </table>
+  <h2>scoringTable</h2>
   <table id='scoringTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>judgesTable</h2>
+  <table id='judgesTable' class='solid_border' style="width: 100%">
     <thead class='solid_border'>
     </thead>
     <tbody class='solid_border'>
@@ -108,11 +116,21 @@
           sortTable : false
         });
 
+        jsonTable('#judgesTable', {
+          head : [ 'Judge', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
         let contestantTableOptions = {};
         contestantTableOptions.json = [ 'rank', 'contestants' ];
 
         let scoringTableOptions = {};
         scoringTableOptions.json = [ 'rank', 'contestants' ];
+
+        let judgesTableOptions = {};
+        judgesTableOptions.json = [ 'judge', 'contestants' ];
 
         $.ajaxSetup({
           beforeSend : function (xhr) {
@@ -132,6 +150,11 @@
           scoringTable.empty();
           const scoringResponse = {};
           scoringResponse.results = [];
+
+          let judgesTable = $('#judgesTable').find('tbody');
+          judgesTable.empty();
+          const judgesResponse = {};
+          judgesResponse.results = [];
 
           const rank_scores = {};
           const rank_judges = {};
@@ -173,11 +196,22 @@
             scoringResponse.results.push(responseRow);
           }
           
+
+          for (const [judge, votes] of Object.entries(results)) {
+            const responseRow = {};
+            responseRow.judge = judge;
+            responseRow.contestants = JSON.stringify(votes, null, 2);
+            judgesResponse.results.push(responseRow);
+          }
+          
           const contestantRow = makeRow(contestantResponse, contestantTableOptions, 'solid_border centered_text', 'solid_border centered_text');
           contestantTable.append(contestantRow);
           
           const scoringRow = makeRow(scoringResponse, scoringTableOptions, 'solid_border centered_text', 'solid_border centered_text');
           scoringTable.append(scoringRow);
+          
+          const judgesRow = makeRow(judgesResponse, judgesTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          judgesTable.append(judgesRow);
         });
       }
     </script>
