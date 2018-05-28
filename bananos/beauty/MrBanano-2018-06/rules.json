@@ -213,9 +213,9 @@
 					}
 				},
 				{
-					"en": "The second image will be the contestant with bananas. Their face must be visible. It should be creative and have a sign that says #Bananocoin and #Team Junglo.",
-					"es": "La segunda imágen será del participante con bananas. El rostro debe estár visible. Debe ser creativo y tener un cartel que diga #Bananocoin y #Team Junglo.",
-					"pt": "A segunda imagem será o participante com bananas. Seu rosto deve estar visÌvel. Deve ser criativo e ter uma placa ou papel com os dizeres #Bananocoin e #Team Junglo."
+					"en": "The second image will be the contestant with bananas. Their face must be visible. The bananas must be visible. It should be creative and have a sign that says #Bananocoin and #Team Junglo.",
+					"es": "La segunda imágen será del participante con bananas. El rostro debe estár visible. El bananas debe estár visible. Debe ser creativo y tener un cartel que diga #Bananocoin y #Team Junglo.",
+					"pt": "A segunda imagem será o participante com bananas. Seu rosto deve estar visÌvel. Seu bananas deve estar visÌvel. Deve ser criativo e ter uma placa ou papel com os dizeres #Bananocoin e #Team Junglo."
 				}
 			],
 			"strength": [
