@@ -65,5 +65,17 @@
 				"video": "https://www.youtube.com/embed/UpnlGGJhDzU"
 			}
 		]
+	},
+	{
+		"contestant": "5",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 16:00",
+		"discord": "Jacko#7828",
+		"verification": [
+			"https://i.imgur.com/C64vjvE.png"
+		],
+		"banano": [
+		],
+		"video": [
+		]
 	}
 ]
