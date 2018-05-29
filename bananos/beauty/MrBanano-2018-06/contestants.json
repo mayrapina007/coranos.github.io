@@ -60,6 +60,10 @@
 		"banano": [
 		],
 		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/UpnlGGJhDzU/default.jpg",
+				"video": "https://www.youtube.com/embed/UpnlGGJhDzU"
+			}
 		]
 	}
 ]
