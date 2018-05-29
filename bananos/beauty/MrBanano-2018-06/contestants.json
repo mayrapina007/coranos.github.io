@@ -9,11 +9,10 @@
 		"banano": [
 			"https://i.imgur.com/VP2DmJx.jpg"
 		],
-		"video": [
-		]
+		"video": []
 	},
 	{
-		"contestant": "1",
+		"contestant": "2",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-27 22:15",
 		"discord": "Deacero1000#3856",
 		"verification": [
@@ -22,7 +21,31 @@
 		"banano": [
 			"https://i.imgur.com/T8q7xcv.jpg"
 		],
+		"video": []
+	},
+	{
+		"contestant": "3",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 12:00",
+		"discord": "ArticPaul#8132",
+		"verification": [
+			"https://i.imgur.com/vyraWbc.jpg",
+			"https://i.imgur.com/N8GdzUG.jpg",
+			"https://i.imgur.com/pqVrFFr.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/odIrDLO.jpg",
+			"https://i.imgur.com/mVbVgMI.jpg",
+			"https://i.imgur.com/8zBGL5r.jpg"
+		],
 		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/veosr9sqHb8/default.jpg",
+				"video": "https://www.youtube.com/embed/veosr9sqHb8"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/fXmMTKGOxHQ/default.jpg",
+				"video": "https://www.youtube.com/embed/fXmMTKGOxHQ"
+			}
 		]
 	}
 ]
