@@ -47,5 +47,19 @@
 				"video": "https://www.youtube.com/embed/fXmMTKGOxHQ"
 			}
 		]
+	},
+	{
+		"contestant": "4",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 12:10",
+		"discord": "rah 🇨🇦#0704",
+		"verification": [
+			"https://i.imgur.com/T3J1Hc5.jpg",
+			"https://i.imgur.com/hV2N3Gz.jpg",
+			"https://i.imgur.com/3b4sBLW.jpg"
+		],
+		"banano": [
+		],
+		"video": [
+		]
 	}
 ]
