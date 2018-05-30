@@ -57,8 +57,7 @@
 			"https://i.imgur.com/hV2N3Gz.jpg",
 			"https://i.imgur.com/3b4sBLW.jpg"
 		],
-		"banano": [
-		],
+		"banano": [],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/UpnlGGJhDzU/default.jpg",
@@ -74,19 +73,8 @@
 			"https://i.imgur.com/C64vjvE.png"
 		],
 		"banano": [
-		],
-		"video": [
-		]
-	},
-	{
-		"contestant": "6"
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-30 11:37",
-		"discord": "Mayrapina#9547",
-		"verification": [
-			"https://i.imgur.com/yyhvtvu.jpg"
-		],
-		"banano": [
-			"https://i.imgur.com/yyhvtvu.jpg"
+			"https://i.imgur.com/vnyQYsb.png",
+			"https://i.imgur.com/Ej68FQ3.png"
 		],
 		"video": []
 	}
