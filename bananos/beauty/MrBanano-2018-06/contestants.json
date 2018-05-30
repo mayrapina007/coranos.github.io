@@ -81,7 +81,7 @@
 	},
 	{
 		"contestant": "6",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 16:00",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-30 12:00",
 		"discord": "l333nny#2143",
 		"verification": [
 			"https://i.imgur.com/2aXslmp.jpg"
@@ -94,6 +94,19 @@
 				"thumbnail": "https://img.youtube.com/vi/90oYZZEzc5k/default.jpg",
 				"video": "https://www.youtube.com/embed/90oYZZEzc5k"
 			}
+		]
+	},
+	{
+		"contestant": "7",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-30 16:00",
+		"discord": "jbrice#2496",
+		"verification": [
+			"https://i.imgur.com/iGyfJsf.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/ZEfTVGU.jpg"
+		],
+		"video": [
 		]
 	}
 ]
