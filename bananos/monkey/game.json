@@ -1,5 +1,6 @@
 {
 	"slowDownFlag":false,
+	"time":2000,
 	"prefix": "images/",
 	"expected": {
 		"left": "A.png",
