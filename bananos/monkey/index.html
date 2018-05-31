@@ -37,7 +37,7 @@
     <div style="width: 600px">
       <div id="hasAccountFlagYes">
         <p>
-          <b>Account: ${account}</b> <input id="account" type="hidden" name="account" value="${account}" />
+          <b>Account: <span id="account-text">??</span></b> <input id="account" type="hidden" name="account" value="${account}" />
         </p>
       </div>
       <div id="hasAccountFlagNo">
@@ -48,20 +48,6 @@
       </div>
     </div>
     <div style="width: 600px; height: 600px" id="game">
-    <!-- 
-      <svg width="600" height="600" class="expected">
-        <rect x="1" y="1" height="599" width="599" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-        <image xlink:href="images/0.png" x="0" y="0" height="300" width="300" />  
-        <image xlink:href="images/1.png" x="300" y="300" height="300" width="300" />  
-        <rect x="1" y="1" height="599" width="599" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-      </svg>
-      <label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" /> <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label>
-         -->
     </div>
   </form>
   <script src='../../js-lib/jquery-3.2.1.js'></script>
@@ -69,9 +55,7 @@
   <script src='monkey.js'></script>
   <script>
       function onLoad () {
-        var account = getUrlParameter('account');
-        document.getElementById('account').innerHTML = account;
-
+        synchAccountDisplay();
         const options = {
           'gameSelector' : '#game',
           'goodScoreSelector' : '#goodScore',

@@ -1,0 +1,74 @@
+{
+	"slowDownFlag":false,
+	"prefix": "images/",
+	"expected": {
+		"left": "A.png",
+		"right": "B.png"
+	},
+	"choices": [
+		{
+			"left": "0.png",
+			"right": "0.png"
+		},
+		{
+			"left": "1.png",
+			"right": "0.png"
+		},
+		{
+			"left": "2.png",
+			"right": "0.png"
+		},
+		{
+			"left": "3.png",
+			"right": "0.png"
+		},
+		{
+			"left": "0.png",
+			"right": "1.png"
+		},
+		{
+			"left": "1.png",
+			"right": "1.png"
+		},
+		{
+			"left": "2.png",
+			"right": "1.png"
+		},
+		{
+			"left": "3.png",
+			"right": "1.png"
+		},
+		{
+			"left": "0.png",
+			"right": "2.png"
+		},
+		{
+			"left": "1.png",
+			"right": "2.png"
+		},
+		{
+			"left": "2.png",
+			"right": "2.png"
+		},
+		{
+			"left": "3.png",
+			"right": "2.png"
+		},
+		{
+			"left": "0.png",
+			"right": "3.png"
+		},
+		{
+			"left": "1.png",
+			"right": "3.png"
+		},
+		{
+			"left": "2.png",
+			"right": "3.png"
+		},
+		{
+			"left": "3.png",
+			"right": "3.png"
+		}
+	]
+}
