@@ -160,8 +160,18 @@ function newGame() {
             }
         }
     });
+    
+    const urlPrefix = 'http://banano.coranos.io:8080';
+    var url ;
+    var accountInput = document.getElementById('old-account');
+    if (accountInput.value.length == 0) {
+      url = urlPrefix;
+    } else {
+      url = urlPrefix + "?account=" + accountInput.value;
+    }
 
-    $.getJSON('game.json', function(gameJson) {
+
+    $.getJSON(url, function(gameJson) {
         if (gameJson.slowDownFlag === false) {
             d3.select('#slowDownFlag').style('display', 'none');
         }

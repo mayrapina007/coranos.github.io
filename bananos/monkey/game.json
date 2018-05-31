@@ -1,75 +1,77 @@
 {
-	"slowDownFlag":false,
-	"time":2000,
-	"prefix": "images/",
+	"wins": 0,
+	"prefix": "https://i.imgur.com/",
 	"expected": {
-		"left": "A.png",
-		"right": "B.png"
+		"left": "5pO5dq7.png",
+		"right": "5pO5dq7.png"
 	},
+	"time": 2000,
+	"slowDownFlag": false,
+	"losses": 0,
 	"choices": [
 		{
-			"left": "0.png",
-			"right": "0.png"
+			"left": "JTP0UKz.png",
+			"right": "JTP0UKz.png"
 		},
 		{
-			"left": "1.png",
-			"right": "0.png"
+			"left": "ERMOMYF.png",
+			"right": "ERMOMYF.png"
 		},
 		{
-			"left": "2.png",
-			"right": "0.png"
+			"left": "fDL2Ubb.png",
+			"right": "fDL2Ubb.png"
 		},
 		{
-			"left": "3.png",
-			"right": "0.png"
+			"left": "5pO5dq7.png",
+			"right": "5pO5dq7.png"
 		},
 		{
-			"left": "0.png",
-			"right": "1.png"
+			"left": "JTP0UKz.png",
+			"right": "JTP0UKz.png"
 		},
 		{
-			"left": "1.png",
-			"right": "1.png"
+			"left": "ERMOMYF.png",
+			"right": "ERMOMYF.png"
 		},
 		{
-			"left": "2.png",
-			"right": "1.png"
+			"left": "fDL2Ubb.png",
+			"right": "fDL2Ubb.png"
 		},
 		{
-			"left": "3.png",
-			"right": "1.png"
+			"left": "5pO5dq7.png",
+			"right": "5pO5dq7.png"
 		},
 		{
-			"left": "0.png",
-			"right": "2.png"
+			"left": "JTP0UKz.png",
+			"right": "JTP0UKz.png"
 		},
 		{
-			"left": "1.png",
-			"right": "2.png"
+			"left": "ERMOMYF.png",
+			"right": "ERMOMYF.png"
 		},
 		{
-			"left": "2.png",
-			"right": "2.png"
+			"left": "fDL2Ubb.png",
+			"right": "fDL2Ubb.png"
 		},
 		{
-			"left": "3.png",
-			"right": "2.png"
+			"left": "5pO5dq7.png",
+			"right": "5pO5dq7.png"
 		},
 		{
-			"left": "0.png",
-			"right": "3.png"
+			"left": "JTP0UKz.png",
+			"right": "JTP0UKz.png"
 		},
 		{
-			"left": "1.png",
-			"right": "3.png"
+			"left": "ERMOMYF.png",
+			"right": "ERMOMYF.png"
 		},
 		{
-			"left": "2.png",
-			"right": "3.png"
+			"left": "fDL2Ubb.png",
+			"right": "fDL2Ubb.png"
 		},
 		{
-			"left": "3.png",
-			"right": "3.png"
+			"left": "5pO5dq7.png",
+			"right": "5pO5dq7.png"
 		}
 	]
 }
