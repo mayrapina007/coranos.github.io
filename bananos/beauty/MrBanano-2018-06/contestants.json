@@ -122,5 +122,23 @@
 				"video": "https://www.youtube.com/embed/BbPmdILHn6Q"
 			}
 		]
+	},
+	{
+		"contestant": "9",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 17:00",
+		"discord": "JhonAlvarez#1227",
+		"verification": [
+			"https://i.imgur.com/YJObSjz.jpg",
+			"https://i.imgur.com/cmbunxX.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/i9jqJuC.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/hbTV4-WPAjI/default.jpg",
+				"video": "https://www.youtube.com/embed/hbTV4-WPAjI"
+			}
+		]
 	}
 ]
