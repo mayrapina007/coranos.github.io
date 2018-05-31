@@ -161,7 +161,7 @@ function newGame() {
         }
     });
 
-    $.getJSON('game.json', function(gameJson) {
+    $.getJSON('http://localhost:8080', function(gameJson) {
         if (gameJson.slowDownFlag === false) {
             d3.select('#slowDownFlag').style('display', 'none');
         }
