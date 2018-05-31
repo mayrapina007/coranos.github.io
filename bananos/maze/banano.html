@@ -30,20 +30,19 @@
     </p>
   </div>
   <form>
-    <div style="width:600px">
-    <#if account??>
-          <p>
-            <b>Account: ${account}</b>
-        <input id="account" type="hidden" name="account" value="${account}"/>
-          </p>
-    <#else>
-        </div>
+    <div style="width: 600px">
+      <div id="hasAccountFlagYes">
+        <p>
+          <b>Account: ${account}</b> <input id="account" type="hidden" name="account" value="${account}" />
+        </p>
+      </div>
+      <div id="hasAccountFlagNo">
         <p>
           <b>Please enter a bananos account, then click on the matching monkey.</b>
         </p>
-      <input id="account" type="text" name="account" value="" size="64"/>
-    </#if>
-    <div style="width: 800; height: 800;" id="game"></div>
+        <input id="account" type="text" name="account" value="" size="64" />
+      </div>
+      <div style="width: 800; height: 800;" id="game"></div>
   </form>
   <script src='../../js-lib/jquery-3.2.1.js'></script>
   <script src="../../js-lib/d3-4.6.0.js"></script>

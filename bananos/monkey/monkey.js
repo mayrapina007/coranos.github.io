@@ -53,9 +53,41 @@ function updateTime () {
   }
 }
 
+function makeGame(options) {
+  d3.select(options.gameSelector).html('');
+  
+  const numberOfGames = options.numberOfGames;
+  d3.select(options.gameSelector).style('width',width*Math.sqrt(numberOfGames));
+
+  $.ajaxSetup({
+    beforeSend : function (xhr) {
+      if (xhr.overrideMimeType) {
+        xhr.overrideMimeType('application/json');
+      }
+    }
+  });
+
+  $.getJSON('game.json', function (gameJson) {
+    makeMonkeySvg(gameJson.expected);
+    
+    for (let choiceIx = 0; choiceIx < gameJson.choices.length; choiceIx++) {
+      makeMonkeySvg(gameJson.choices[choiceIx]);
+    }
+    
+    const realIx = getRandomInt(numberOfGames);
+    goodIx = realIx;
+
+    for (let gameIx = 0; gameIx < numberOfGames; gameIx++) {
+      const breakHamiltonianCycle = !(gameIx == realIx);
+      const rotation = (2.0 * Math.PI) / ((gameIx * 1.0) / numberOfGames);
+      makeGameSvg(gameIx, options, bananoJson, rotation, breakHamiltonianCycle);
+    }
+    setInterval(updateTime, 100);
+    updateTime();
+  });
+}
+
 function onLoad () {
   var account = getUrlParameter('account');
   document.getElementById('account').innerHTML = account;
-  setInterval(updateTime, 100);
-  updateTime();
 }
