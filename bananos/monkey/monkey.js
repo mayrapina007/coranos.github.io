@@ -161,7 +161,7 @@ function newGame() {
         }
     });
     
-    const urlPrefix = 'http://banano.coranos.io:8080';
+    const urlPrefix = '//banano.coranos.io:8080';
     var url ;
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length == 0) {
