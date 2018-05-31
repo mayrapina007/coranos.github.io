@@ -60,9 +60,10 @@ function getUrlParameter(sParam) {
 };
 
 function submitForm() {
-    var accountInput = document.getElementById('account');
+    synchAccountDisplay();
+    var accountInput = document.getElementById('old-account');
     if (accountInput.value.length == 0) {
-        accountInput.style['background-color'] = 'red';
+        document.getElementById('new-account').style['background-color'] = 'red';
         return false;
     }
     if (time > 0) {
@@ -187,12 +188,15 @@ function newGame() {
 }
 
 function synchAccountDisplay() {
-    var account = getUrlParameter('account');
-    d3.select('#account-text').html(account);
-    if (account === undefined) {
-        d3.select('#hasAccountFlagYes').style('display', 'none');
+    var account = d3.select('#new-account').node().value;
+    if (account.length == 0) {
+      d3.select('#hasAccountFlagYes').style('display', 'none');
+      d3.select('#hasAccountFlagNo').style('display', 'block');
     } else {
-        d3.select('#hasAccountFlagNo').style('display', 'none');
+      d3.select('#old-account').node().value = account;
+      d3.select('#account-text').html(account);
+      d3.select('#hasAccountFlagYes').style('display', 'block');
+      d3.select('#hasAccountFlagNo').style('display', 'none');
     }
 
 }
