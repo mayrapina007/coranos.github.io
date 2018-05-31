@@ -76,8 +76,7 @@
 			"https://i.imgur.com/vnyQYsb.png",
 			"https://i.imgur.com/Ej68FQ3.png"
 		],
-		"video": [
-		]
+		"video": []
 	},
 	{
 		"contestant": "6",
@@ -106,7 +105,22 @@
 		"banano": [
 			"https://i.imgur.com/ZEfTVGU.jpg"
 		],
+		"video": []
+	},
+	{
+		"contestant": "8",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-30 16:00",
+		"discord": "jbrice#2496",
+		"verification": [
+			"https://i.imgur.com/ZwCajSf.jpg",
+			"https://i.imgur.com/SY4nrx7.jpg"
+		],
+		"banano": [],
 		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/BbPmdILHn6Q/default.jpg",
+				"video": "https://www.youtube.com/embed/BbPmdILHn6Q"
+			}
 		]
 	}
 ]

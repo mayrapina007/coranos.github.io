@@ -4,59 +4,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="cache-control" content="no-cache">
 <title>Banano Finder</title>
-<style type='text/css'>
-.solid_border {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-
-.centered_text {
-  text-align: center;
-}
-
-input.image[type="submit"] {
-  display: none;
-  border-width: 0px;
-  padding: 0px;
-}
-
-label {
-  display: none;
-  padding: 0px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: -6px;
-  width: 150px;
-  height: 150px;
-  font-size: 0px;
-  position: relative;
-  z-index: 0;
-}
-
-svg.choice {
-  position: relative;
-  display: block;
-  padding: 0px;
-  margin: 0px;
-  z-index: 0;
-}
-
-svg.expected {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  display: none;
-  padding: 0px;
-  margin: 0px;
-  z-index: -1;
-}
-
-#game {
-  position: relative;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload="onLoad();">
   <table>
@@ -69,9 +17,9 @@ svg.expected {
             <th class="solid_border centered_text">Total</th>
           </tr>
           <tr>
-            <td class="solid_border centered_text">10</td>
-            <td class="solid_border centered_text">13</td>
-            <td class="solid_border centered_text">-3</td>
+            <td class="solid_border centered_text">0</td>
+            <td class="solid_border centered_text">0</td>
+            <td class="solid_border centered_text">0</td>
           </tr>
         </table>
       </td>
@@ -100,163 +48,22 @@ svg.expected {
           <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
           <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
           <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
-        </svg></label><label class="choiceLabel"><input class="image" type="submit" name="choice" value="0" />
-      <svg width="150" height="150" class="choice">
-          <rect x="1" y="1" height="149" width="149" style="stroke: black; fill: none; stroke-width: 1;"></rect>
-          <image xlink:href="images/0.png" x="0" y="0" height="75" width="75" />  
-          <image xlink:href="images/1.png" x="75" y="75" height="75" width="75" />  
-          <rect x="1" y="1" height="149" width="149" pointer-events="visible" style="stroke: red; fill: none; stroke-width: 1;"></rect>
         </svg></label>
     </div>
   </form>
+  <script src='../../js-lib/jquery-3.2.1.js'></script>
+  <script src="../../js-lib/d3-4.6.0.js"></script>
+  <script src='monkey.js'></script>
   <script>
-      const maxTime = 2000;
-      var time = maxTime;
-
-      var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : sParameterName[1];
-            }
-        }
-    };
-      
-      function submitForm () {
-        var accountInput = document.getElementById('account');
-        if (accountInput.value.length == 0) {
-          accountInput.style['background-color'] = 'red';
-          return false;
-        }
-        if (time > 0) {
-          var timeDiv = document.getElementById('timer');
-          timeDiv.style['background-color'] = 'red';
-          return false;
-        }
-        return true;
-      }
-
-      function updateTime () {
-        //console.log('updateTime', time);
-        var timeDiv = document.getElementById('timer');
-        if ((time % 1000) == 0) {
-          timeDiv.innerHTML = Math.round(time / 1000);
-        }
-        time -= 100;
-
-        var choices = document.getElementsByClassName('choiceLabel');
-        var timeDiff = maxTime / choices.length;
-        for (var ix = 0; ix < choices.length; ix++) {
-          if (ix * timeDiff >= time) {
-            choices[ix].style.display = 'inline-block';
-          }
-        }
-
-        if (time < 0) {
-          timeDiv.style['background-color'] = 'white';
-          var expectations = document.getElementsByClassName('expected');
-          for (var ix = 0; ix < expectations.length; ix++) {
-            expectations[ix].style.display = 'block';
-          }
-          time = 0;
-        }
-      }
-
       function onLoad () {
-        var account = getUrlParameter('account');
-        document.getElementById('account').innerHTML = account;
-        setInterval(updateTime, 100);
-        updateTime();
+        const options = {
+          'gameSelector' : '#game',
+          'goodScoreSelector' : '#goodScore',
+          'badScoreSelector' : '#badScore',
+          'totalScoreSelector' : '#totalScore',
+          'numberOfGames' : 16
+        };
+        makeGame(options);
       }
     </script>
 </body>

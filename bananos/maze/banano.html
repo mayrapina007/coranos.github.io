@@ -24,7 +24,25 @@
       <td class="solid_border centered_text" id="totalScore">0</td>
     </tr>
   </table>
+  <div id="slowDownFlag">
+    <p>
+      <b>Slow down, you submitted to quickly and your entry was not counted.</b>
+    </p>
+  </div>
   <form>
+    <div style="width:600px">
+    <#if account??>
+          <p>
+            <b>Account: ${account}</b>
+        <input id="account" type="hidden" name="account" value="${account}"/>
+          </p>
+    <#else>
+        </div>
+        <p>
+          <b>Please enter a bananos account, then click on the matching monkey.</b>
+        </p>
+      <input id="account" type="text" name="account" value="" size="64"/>
+    </#if>
     <div style="width: 800; height: 800;" id="game"></div>
   </form>
   <script src='../../js-lib/jquery-3.2.1.js'></script>
@@ -42,6 +60,5 @@
         makeGame(options);
       }
     </script>
-
 </body>
 </html>
