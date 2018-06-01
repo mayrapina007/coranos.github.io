@@ -57,7 +57,10 @@
 			"https://i.imgur.com/hV2N3Gz.jpg",
 			"https://i.imgur.com/3b4sBLW.jpg"
 		],
-		"banano": [],
+		"banano": [
+			"https://i.imgur.com/ZSSz9jF.jpg",
+			"https://i.imgur.com/CrWZj6W.jpg"
+		],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/UpnlGGJhDzU/default.jpg",
@@ -168,5 +171,24 @@
 				"video": "https://www.youtube.com/embed/T2cJP132AKM"
 			}
 		]
+	},
+	{
+		"contestant": "13",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:30",
+		"discord": "@JosegrexD-Team Los Sopla Nuca-#3635",
+		"verification": [
+			"https://i.imgur.com/Nevpfu4.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/kS78dqa.jpg",
+			"https://i.imgur.com/dayICVK.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/dzpt9JvRFlA/default.jpg",
+				"video": "https://www.youtube.com/embed/dzpt9JvRFlA"
+			}
+		]
 	}
+	 
 ]
