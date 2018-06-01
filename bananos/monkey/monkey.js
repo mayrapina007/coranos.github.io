@@ -201,10 +201,10 @@ function setupHtml () {
   tr1.append('th').attr('class','solid_border centered_text').text('Bad');
   tr1.append('th').attr('class','solid_border centered_text').text('Total');
   const tr2 = table.append('tr');
-  tr2.append('th').attr('class','solid_border centered_text').text('0');
-  tr2.append('th').attr('class','solid_border centered_text').text('0');
-  tr2.append('th').attr('class','solid_border centered_text').text('0');
-  
+  tr2.append('th').attr('class','solid_border centered_text').attr('id','goodScore').text('0');
+  tr2.append('th').attr('class','solid_border centered_text').attr('id','badScore').text('0');
+  tr2.append('th').attr('class','solid_border centered_text').attr('id','totalScore').text('0');
+
   body.append('p').text('Seconds Until Submission ').append('span').attr('id','timer').text('??');
   
   body.append('div').attr('id','slowDownFlag').append('p').append('b')
