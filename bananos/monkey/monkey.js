@@ -164,10 +164,12 @@ function newGame() {
           d3.select('#slowDownFlag').style('display', 'none');
         }
         if (gameJson.accountIsInvalidFlag === false) {
-          d3.select('#accountIsInvalidFlag').style('display', 'none');
-          document.getElementById('new-account').value = document.getElementById('old-account').value;
-          document.getElementById('old-account').value = '';
-          synchAccountDisplay();
+          if(document.getElementById('new-account').value !== '') {
+            d3.select('#accountIsInvalidFlag').style('display', 'none');
+            document.getElementById('new-account').value = document.getElementById('old-account').value;
+            document.getElementById('old-account').value = '';
+            synchAccountDisplay();
+          }
         }
         
         updateScore(gameJson.wins,gameJson.losses);
