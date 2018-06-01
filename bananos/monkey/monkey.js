@@ -161,7 +161,7 @@ function newGame() {
         }
     });
     
-    const urlPrefix = 'https://banano.coranos.io:8080';
+    const urlPrefix = options.urlPrefix;
     var url ;
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length == 0) {
@@ -210,5 +210,52 @@ function synchAccountDisplay() {
       d3.select('#hasAccountFlagYes').style('display', 'block');
       d3.select('#hasAccountFlagNo').style('display', 'none');
     }
+}
 
+function setupHtml () {
+  const body = d3.select('#body');
+  const table = body.append('table');
+  table.attr('class','solid_border centered_text');
+  const tr1 = table.append('tr');
+  tr1.append('th').attr('class','solid_border centered_text').text('Good');
+  tr1.append('th').attr('class','solid_border centered_text').text('Bad');
+  tr1.append('th').attr('class','solid_border centered_text').text('Total');
+  const tr2 = table.append('tr');
+  tr2.append('th').attr('class','solid_border centered_text').text('0');
+  tr2.append('th').attr('class','solid_border centered_text').text('0');
+  tr2.append('th').attr('class','solid_border centered_text').text('0');
+  
+  body.append('p').text('Seconds Until Submission ').append('span').attr('id','timer').text('??');
+  
+  body.append('div').attr('id','slowDownFlag').append('p').append('b')
+    .text('Slow down, you submitted to quickly and your entry was not counted.');
+  
+  const form = body.append('form');
+  form.attr('action','.').attr('method','get').attr('onsubmit','return submitForm();');
+  const accountDiv = form.append('div');
+  accountDiv.attr('style','width: 600px');
+  
+  accountDiv.append('div').attr('id','hasAccountFlagYes').append('p').append('b')
+    .text('Account: ').append('span').attr('id','account-text').text('??');
+  accountDiv.append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
+  
+  accountDiv.append('div').attr('id','hasAccountFlagNo').append('p').append('b')
+    .text('Please enter a bananos account, then click on the matching monkey.');
+  accountDiv.append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
+
+  const gameDiv = form.append('div');
+  gameDiv.style('width','600px').style('height','600px').attr('id','game');
+}
+
+function onLoad (urlPrefix) {
+  setupHtml();
+  synchAccountDisplay();
+  const options = {
+    'gameSelector' : '#game',
+    'goodScoreSelector' : '#goodScore',
+    'badScoreSelector' : '#badScore',
+    'totalScoreSelector' : '#totalScore',
+    'urlPrefix' : urlPrefix
+  };
+  makeGame(options);
 }

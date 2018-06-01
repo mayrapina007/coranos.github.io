@@ -5,63 +5,9 @@
 <title>Banano Finder</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body onload="onLoad();">
-  <table>
-    <tr>
-      <td class="solid_border centered_text">
-        <table>
-          <tr>
-            <th class="solid_border centered_text">Good</th>
-            <th class="solid_border centered_text">Bad</th>
-            <th class="solid_border centered_text">Total</th>
-          </tr>
-          <tr>
-            <td class="solid_border centered_text" id="goodScore">0</td>
-            <td class="solid_border centered_text" id="badScore">0</td>
-            <td class="solid_border centered_text" id="totalScore">0</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-  <p>
-    Seconds Until Submission <span id="timer">??</span>
-  </p>
-  <div id="slowDownFlag">
-    <p>
-      <b>Slow down, you submitted to quickly and your entry was not counted.</b>
-    </p>
-  </div>
-  <form action="." method="get" onsubmit="return submitForm();">
-    <div style="width: 600px">
-      <div id="hasAccountFlagYes">
-        <p>
-          <b>Account: <span id="account-text">??</span></b> <input id="old-account" type="hidden" name="account" value="" />
-        </p>
-      </div>
-      <div id="hasAccountFlagNo">
-        <p>
-          <b>Please enter a bananos account, then click on the matching monkey.</b>
-        </p>
-        <input id="new-account" type="text" name="account" value="" size="64" />
-      </div>
-    </div>
-    <div style="width: 600px; height: 600px" id="game"></div>
-  </form>
+<body id="body" onload="onLoad('game.json');">
   <script src='../../js-lib/jquery-3.2.1.js'></script>
   <script src="../../js-lib/d3-4.6.0.js"></script>
   <script src='monkey.js'></script>
-  <script>
-      function onLoad () {
-        synchAccountDisplay();
-        const options = {
-          'gameSelector' : '#game',
-          'goodScoreSelector' : '#goodScore',
-          'badScoreSelector' : '#badScore',
-          'totalScoreSelector' : '#totalScore'
-        };
-        makeGame(options);
-      }
-    </script>
 </body>
 </html>
