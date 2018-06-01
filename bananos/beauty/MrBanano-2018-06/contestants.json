@@ -151,5 +151,22 @@
 		],
 		"video": [
 		]
+	},
+	{
+		"contestant": "12",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:20",
+		"discord": "Bananoeira✌#4382",
+		"verification": [
+			"https://i.imgur.com/uV3PzbO.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/oCHLa4U.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/T2cJP132AKM/default.jpg",
+				"video": "https://www.youtube.com/embed/T2cJP132AKM"
+			}
+		]
 	}
 ]
