@@ -131,6 +131,7 @@ function makeGame(gameOptions) {
 }
 
 function newGame() {
+    const oldClickedIx = clickedIx;
     clickedIx = undefined;
 
     d3.select('.choiceLabel').style('display', 'none');
@@ -153,10 +154,9 @@ function newGame() {
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length > 0) {
       url += "?account=" + accountInput.value;
-      if(clickedIx !== undefined) {
-        url += "&clicked=" + clickedIx;
-      }
+      url += "&choice=" + oldClickedIx;
     }
+    alert(url);
 
     $.getJSON(url, function(gameJson) {
         if (gameJson.slowDownFlag === false) {
