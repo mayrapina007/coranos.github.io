@@ -161,17 +161,19 @@ function newGame() {
         }
     });
     
-    const urlPrefix = '//banano.coranos.io:8080';
+    const urlPrefix = 'http://banano.coranos.io:8080';
     var url ;
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length == 0) {
       url = urlPrefix;
     } else {
-      url = urlPrefix + "?account=" + accountInput.value;
+      url = urlPrefix + "/account/" + accountInput.value;
     }
 
+    console.log('get1',url);
 
     $.getJSON(url, function(gameJson) {
+        console.log('get2',url,gameJson);
         if (gameJson.slowDownFlag === false) {
             d3.select('#slowDownFlag').style('display', 'none');
         }
