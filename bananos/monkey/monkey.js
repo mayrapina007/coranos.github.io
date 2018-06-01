@@ -169,7 +169,7 @@ function newGame() {
           if(document.getElementById('new-account').value === '') {
             d3.select('#accountIsInvalidFlag').style('display', 'none');
           } else {
-            document.getElementById('new-account').value = document.getElementById('old-account').value;
+            document.getElementById('new-account').value = '';
             document.getElementById('old-account').value = '';
             synchAccountDisplay();
           }
