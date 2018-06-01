@@ -4,21 +4,10 @@ const choiceValueImageSize = 150;
 const maxTime = 2000;
 var time = maxTime;
 
-let goodScore = 0;
-let badScore = 0;
-let goodIx = undefined;
 let clickedIx = undefined;
 let options = undefined;
 
-function updateScore(ix) {
-    if (goodIx == undefined) {
-        return;
-    }
-    if (ix == goodIx) {
-        goodScore++;
-    } else {
-        badScore++;
-    }
+function updateScore(goodScore,badScore) {
     const totalScore = goodScore - badScore;
     d3.select(options.goodScoreSelector).html(goodScore);
     d3.select(options.badScoreSelector).html(badScore);
@@ -71,7 +60,6 @@ function submitForm() {
         timeDiv.style['background-color'] = 'red';
         return false;
     }
-    updateScore(clickedIx);
     newGame();
     return false;
 }
@@ -143,7 +131,6 @@ function makeGame(gameOptions) {
 }
 
 function newGame() {
-    goodIx = undefined;
     clickedIx = undefined;
 
     d3.select('.choiceLabel').style('display', 'none');
@@ -174,20 +161,16 @@ function newGame() {
         if (gameJson.slowDownFlag === false) {
             d3.select('#slowDownFlag').style('display', 'none');
         }
+        
+        updateScore(gameJson.wins,gameJson.losses);
 
         gameJson.expected.prefix = gameJson.prefix;
         makeMonkeySvg(options.gameSelector, gameJson.expected, expectedValueImageSize, undefined);
-
-        gameJson.choices[4].good = true;
         
         shuffle(gameJson.choices);
         for (let choiceIx = 0; choiceIx < gameJson.choices.length; choiceIx++) {
             gameJson.choices[choiceIx].prefix = gameJson.prefix;
             makeMonkeySvg(options.gameSelector, gameJson.choices[choiceIx], choiceValueImageSize, choiceIx);
-            
-            if(gameJson.choices[choiceIx].good == true) {
-              goodIx = choiceIx;
-            }
         }
 
         time = maxTime
@@ -232,12 +215,16 @@ function setupHtml () {
   const accountDiv = form.append('div');
   accountDiv.attr('style','width: 600px');
   
-  accountDiv.append('div').attr('id','hasAccountFlagYes').append('p').append('b')
-    .text('Account: ').append('span').attr('id','account-text').text('??')
-    .append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
   
-  accountDiv.append('div').attr('id','hasAccountFlagNo').append('p').append('b')
-    .text('Please enter a bananos account, then click on the matching monkey.')
+  const yesDiv = accountDiv.append('div');
+  yesDiv.attr('id','hasAccountFlagYes').append('p').append('b')
+    .text('Account: ').append('span').attr('id','account-text').text('??');
+  yesDiv.append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
+  
+  const noDiv = accountDiv.append('div');
+  noDiv.attr('id','hasAccountFlagNo').append('p').append('b')
+    .text('Please enter a bananos account, then click on the matching monkey.');
+  noDiv
     .append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
 
   const gameDiv = form.append('div');
