@@ -149,12 +149,13 @@ function newGame() {
     });
     
     const urlPrefix = options.urlPrefix;
-    var url ;
+    var url = urlPrefix;
     var accountInput = document.getElementById('old-account');
-    if (accountInput.value.length == 0) {
-      url = urlPrefix;
-    } else {
-      url = urlPrefix + "?account=" + accountInput.value;
+    if (accountInput.value.length > 0) {
+      url += "?account=" + accountInput.value;
+    }
+    if(clickedIx !== undefined) {
+      url += "?clicked=" + clickedIx;
     }
 
     $.getJSON(url, function(gameJson) {
