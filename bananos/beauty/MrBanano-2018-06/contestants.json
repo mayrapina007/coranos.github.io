@@ -124,23 +124,32 @@
 		]
 	},
 	{
-		"contestant": "9",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 17:00",
-		"discord": "JhonAlvarez#1227",
+		"contestant": "10",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:00",
+		"discord": "GreatDragonian#2741",
 		"verification": [
-			"https://i.imgur.com/YJObSjz.jpg",
-			"https://i.imgur.com/cmbunxX.jpg",
-			"https://i.imgur.com/eXBnWAo.png"
+			"https://i.imgur.com/6c3QQrz.jpg"
 		],
 		"banano": [
-			"https://i.imgur.com/i9jqJuC.jpg",
-			"https://i.imgur.com/YEOSrpK.png"
 		],
 		"video": [
 			{
-				"thumbnail": "https://img.youtube.com/vi/hbTV4-WPAjI/default.jpg",
-				"video": "https://www.youtube.com/embed/hbTV4-WPAjI"
+				"thumbnail": "https://img.youtube.com/vi/mnY8bMwFPYo/default.jpg",
+				"video": "https://www.youtube.com/embed/mnY8bMwFPYo"
 			}
+		]
+	},
+	{
+		"contestant": "11",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:10",
+		"discord": "el potacio del mal#2634",
+		"verification": [
+			"https://i.imgur.com/lK5nWBX.jpg"
+		],
+		"banano": [
+		"https://i.imgur.com/pYOlCoY.jpg"
+		],
+		"video": [
 		]
 	}
 ]
