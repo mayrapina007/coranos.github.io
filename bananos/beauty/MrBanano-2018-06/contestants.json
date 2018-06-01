@@ -133,7 +133,7 @@
 	},
 	{
 		"contestant": "10",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:00",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:00",
 		"discord": "GreatDragonian#2741",
 		"verification": [
 			"https://i.imgur.com/6c3QQrz.jpg"
@@ -148,7 +148,7 @@
 	},
 	{
 		"contestant": "11",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:10",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:10",
 		"discord": "el potacio del mal#2634",
 		"verification": [
 			"https://i.imgur.com/lK5nWBX.jpg"
@@ -160,7 +160,7 @@
 	},
 	{
 		"contestant": "12",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:20",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:20",
 		"discord": "Bananoeira✌#4382",
 		"verification": [
 			"https://i.imgur.com/uV3PzbO.jpg"
@@ -177,7 +177,7 @@
 	},
 	{
 		"contestant": "13",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:30",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:30",
 		"discord": "@JosegrexD-Team Los Sopla Nuca-#3635",
 		"verification": [
 			"https://i.imgur.com/Nevpfu4.jpg"
@@ -195,7 +195,7 @@
 	},
 	{
 		"contestant": "14",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:40",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:40",
 		"discord": "@Emocrat3#7550",
 		"verification": [
 			"https://i.imgur.com/aYNULdB.png"
@@ -212,6 +212,19 @@
 				"thumbnail": "https://img.youtube.com/vi/v_R-U_CVMdk/default.jpg",
 				"video": "https://www.youtube.com/embed/v_R-U_CVMdk"
 			}
+		]
+	},
+	{
+		"contestant": "15",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 17:34",
+		"discord": "@TUNENE#0351",
+		"verification": [
+			"https://i.imgur.com/CErDOm4.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/88yHe6h.jpg"
+		],
+		"video": [
 		]
 	}
 ]
