@@ -154,7 +154,9 @@ function newGame() {
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length > 0) {
       url += "?account=" + accountInput.value;
-      url += "&choice=" + oldClickedIx;
+      if(oldClickedIx !== undefined) {
+        url += "&choice=" + oldClickedIx;
+      }
     }
 
     $.getJSON(url, function(gameJson) {
@@ -167,7 +169,7 @@ function newGame() {
         gameJson.expected.prefix = gameJson.prefix;
         makeMonkeySvg(options.gameSelector, gameJson.expected, expectedValueImageSize, undefined);
         
-        //shuffle(gameJson.choices);
+        // shuffle(gameJson.choices);
         for (let choiceIx = 0; choiceIx < gameJson.choices.length; choiceIx++) {
             gameJson.choices[choiceIx].prefix = gameJson.prefix;
             makeMonkeySvg(options.gameSelector, gameJson.choices[choiceIx], choiceValueImageSize, choiceIx);
