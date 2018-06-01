@@ -189,6 +189,26 @@
 				"video": "https://www.youtube.com/embed/dzpt9JvRFlA"
 			}
 		]
+	},
+	{
+		"contestant": "14",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 16:40",
+		"discord": "@Emocrat3#7550",
+		"verification": [
+			"https://i.imgur.com/aYNULdB.png"
+		],
+		"banano": [
+			"https://i.imgur.com/i8KZN1R.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/HSwwVAiJgK8/default.jpg",
+				"video": "https://www.youtube.com/embed/HSwwVAiJgK8"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/v_R-U_CVMdk/default.jpg",
+				"video": "https://www.youtube.com/embed/v_R-U_CVMdk"
+			}
+		]
 	}
-	 
 ]
