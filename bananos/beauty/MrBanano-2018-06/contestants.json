@@ -108,7 +108,12 @@
 		"banano": [
 			"https://i.imgur.com/ZEfTVGU.jpg"
 		],
-		"video": []
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/UrEYMkwQs0k/default.jpg",
+				"video": "https://www.youtube.com/embed/UrEYMkwQs0k"
+			}
+		]
 	},
 	{
 		"contestant": "8",
@@ -133,8 +138,7 @@
 		"verification": [
 			"https://i.imgur.com/6c3QQrz.jpg"
 		],
-		"banano": [
-		],
+		"banano": [],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/mnY8bMwFPYo/default.jpg",
@@ -150,10 +154,9 @@
 			"https://i.imgur.com/lK5nWBX.jpg"
 		],
 		"banano": [
-		"https://i.imgur.com/pYOlCoY.jpg"
+			"https://i.imgur.com/pYOlCoY.jpg"
 		],
-		"video": [
-		]
+		"video": []
 	},
 	{
 		"contestant": "12",
