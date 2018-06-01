@@ -163,6 +163,9 @@ function newGame() {
         if (gameJson.slowDownFlag === false) {
           d3.select('#slowDownFlag').style('display', 'none');
         }
+        if(document.getElementById('new-account').value === '') {
+          d3.select('#accountIsInvalidFlag').style('display', 'none');
+        }
         if (gameJson.accountIsInvalidFlag === false) {
           d3.select('#accountIsInvalidFlag').style('display', 'none');
           document.getElementById('new-account').value = document.getElementById('old-account').value;
