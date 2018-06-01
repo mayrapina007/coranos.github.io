@@ -153,9 +153,9 @@ function newGame() {
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length > 0) {
       url += "?account=" + accountInput.value;
-    }
-    if(clickedIx !== undefined) {
-      url += "?clicked=" + clickedIx;
+      if(clickedIx !== undefined) {
+        url += "&clicked=" + clickedIx;
+      }
     }
 
     $.getJSON(url, function(gameJson) {
