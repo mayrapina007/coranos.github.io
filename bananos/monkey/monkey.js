@@ -167,7 +167,7 @@ function newGame() {
         gameJson.expected.prefix = gameJson.prefix;
         makeMonkeySvg(options.gameSelector, gameJson.expected, expectedValueImageSize, undefined);
         
-        shuffle(gameJson.choices);
+        //shuffle(gameJson.choices);
         for (let choiceIx = 0; choiceIx < gameJson.choices.length; choiceIx++) {
             gameJson.choices[choiceIx].prefix = gameJson.prefix;
             makeMonkeySvg(options.gameSelector, gameJson.choices[choiceIx], choiceValueImageSize, choiceIx);
