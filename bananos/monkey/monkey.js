@@ -170,10 +170,7 @@ function newGame() {
       url = urlPrefix + "?account=" + accountInput.value;
     }
 
-    console.log('get1',url);
-
     $.getJSON(url, function(gameJson) {
-        console.log('get2',url,gameJson);
         if (gameJson.slowDownFlag === false) {
             d3.select('#slowDownFlag').style('display', 'none');
         }
@@ -236,12 +233,12 @@ function setupHtml () {
   accountDiv.attr('style','width: 600px');
   
   accountDiv.append('div').attr('id','hasAccountFlagYes').append('p').append('b')
-    .text('Account: ').append('span').attr('id','account-text').text('??');
-  accountDiv.append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
+    .text('Account: ').append('span').attr('id','account-text').text('??')
+    .append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
   
   accountDiv.append('div').attr('id','hasAccountFlagNo').append('p').append('b')
-    .text('Please enter a bananos account, then click on the matching monkey.');
-  accountDiv.append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
+    .text('Please enter a bananos account, then click on the matching monkey.')
+    .append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
 
   const gameDiv = form.append('div');
   gameDiv.style('width','600px').style('height','600px').attr('id','game');
