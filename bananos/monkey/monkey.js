@@ -207,7 +207,7 @@ function setupHtml () {
   tr2.append('th').attr('class','solid_border centered_text').attr('id','badScore').text('0');
   tr2.append('th').attr('class','solid_border centered_text').attr('id','totalScore').text('0');
 
-  body.append('p').text('Seconds Until Submission ').append('span').attr('id','timer').text('??');
+  body.append('p').text('Game Starts In (Seconds) ').append('span').attr('id','timer').text('??');
   
   body.append('div').attr('id','slowDownFlag').append('p').append('b')
     .text('Slow down, you submitted to quickly and your entry was not counted.');
