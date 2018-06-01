@@ -156,7 +156,6 @@ function newGame() {
       url += "?account=" + accountInput.value;
       url += "&choice=" + oldClickedIx;
     }
-    alert(url);
 
     $.getJSON(url, function(gameJson) {
         if (gameJson.slowDownFlag === false) {
