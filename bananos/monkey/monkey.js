@@ -161,7 +161,13 @@ function newGame() {
 
     $.getJSON(url, function(gameJson) {
         if (gameJson.slowDownFlag === false) {
-            d3.select('#slowDownFlag').style('display', 'none');
+          d3.select('#slowDownFlag').style('display', 'none');
+        }
+        if (gameJson.accountIsInvalidFlag === false) {
+          d3.select('#accountIsInvalidFlag').style('display', 'none');
+          document.getElementById('new-account').value = document.getElementById('old-account').value;
+          document.getElementById('old-account').value = '';
+          synchAccountDisplay();
         }
         
         updateScore(gameJson.wins,gameJson.losses);
@@ -210,8 +216,11 @@ function setupHtml () {
   body.append('p').text('Game Starts In (Seconds) ').append('span').attr('id','timer').text('??');
   
   body.append('div').attr('id','slowDownFlag').append('p').append('b')
-    .text('Slow down, you submitted to quickly and your entry was not counted.');
-  
+  .text('Slow down, you submitted to quickly and your entry was not counted.');
+
+  body.append('div').attr('id','accountIsInvalidFlag').append('p').append('b')
+  .text('The account you entered was invalid, make sure it starts with ban_ and is 64 characters long.');
+
   const form = body.append('form');
   form.attr('action','.').attr('method','get').attr('onsubmit','return submitForm();');
   const accountDiv = form.append('div');
