@@ -1,8 +1,9 @@
 const expectedValueImageSize = 600;
 const choiceValueImageSize = 150;
 
-const maxTime = 2000;
+var maxTime = 2000;
 var time = maxTime;
+var timeIntervalId = undefined;
 
 let clickedIx = undefined;
 let options = undefined;
@@ -189,9 +190,17 @@ function newGame() {
             gameJson.choices[choiceIx].prefix = gameJson.prefix;
             makeMonkeySvg(options.gameSelector, gameJson.choices[choiceIx], choiceValueImageSize, choiceIx);
         }
+        
+        if(gameJson.time !== undefined) {
+          maxTime = gameJson.time;
+        }
 
-        time = maxTime
-        setInterval(updateTime, 100);
+        time = maxTime;
+        if(timeIntervalId !== undefined) {
+          clearInterval(timeIntervalId);
+          timeIntervalId = undefined;
+        }
+        timeIntervalId= setInterval(updateTime, 100);
         updateTime();
     });
 }
