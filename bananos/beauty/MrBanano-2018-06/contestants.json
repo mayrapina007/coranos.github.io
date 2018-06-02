@@ -259,9 +259,12 @@
 			"https://i.imgur.com/CErDOm4.jpg",
 			"https://i.imgur.com/88yHe6h.jpg",
 			"https://i.imgur.com/DFoHjzC.jpg",
-			"https://i.imgur.com/2KsoyM4.jpg"
+			"https://i.imgur.com/2KsoyM4.jpg",
+			"https://i.imgur.com/i5NJLY2.png"
 		],
-		"banano": [],
+		"banano": [
+			"https://i.imgur.com/lfVrC7p.png"
+		],
 		"video": []
 	},
 	{
@@ -348,18 +351,6 @@
 	},
 	{
 		"contestant": "21",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 10:10",
-		"discord": "TUNENE#0351",
-		"verification": [
-			"https://i.imgur.com/i5NJLY2.png"
-		],
-		"banano": [
-			"https://i.imgur.com/lfVrC7p.png"
-		],
-		"video": []
-	},
-	{
-		"contestant": "22",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 10:12",
 		"discord": "CrC#6030",
 		"verification": [
