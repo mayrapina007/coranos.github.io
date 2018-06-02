@@ -19,9 +19,16 @@
 			"https://i.imgur.com/T8q7xcv.jpg"
 		],
 		"banano": [
-			"https://i.imgur.com/T8q7xcv.jpg"
+			"https://i.imgur.com/T8q7xcv.jpg",
+			"https://i.imgur.com/DhsRZNw.jpg",
+			"https://i.imgur.com/3kjWRju.jpg"
 		],
-		"video": []
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/PqL24u_OrMU/default.jpg",
+				"video": "https://www.youtube.com/embed/PqL24u_OrMU"
+			}
+		]
 	},
 	{
 		"contestant": "3",
@@ -143,7 +150,10 @@
 			"https://i.imgur.com/ZwCajSf.jpg",
 			"https://i.imgur.com/SY4nrx7.jpg"
 		],
-		"banano": [],
+		"banano": [
+			"https://i.imgur.com/iBPa67t.jpg",
+			"https://i.imgur.com/iwg3Lsx.jpg"
+		],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/BbPmdILHn6Q/default.jpg",
@@ -293,8 +303,7 @@
 		"verification": [
 			"https://i.imgur.com/K7BbBsS.jpg"
 		],
-		"banano": [
-		],
+		"banano": [],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/oQPu3UA-vs0/default.jpg",
@@ -310,7 +319,7 @@
 			"https://i.imgur.com/R4JaEIH.png"
 		],
 		"banano": [
-		"https://i.imgur.com/MTDMqNT.png"
+			"https://i.imgur.com/MTDMqNT.png"
 		],
 		"video": [
 			{
@@ -318,5 +327,18 @@
 				"video": "https://www.youtube.com/embed/cVy7YeeqGZQ"
 			}
 		]
+	},
+	{
+		"contestant": "20",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 9:58",
+		"discord": "DAGO#2780",
+		"verification": [
+			"https://i.imgur.com/KJgDYet.jpg",
+			"https://i.imgur.com/cf3tf5D.jpg",
+			"https://i.imgur.com/Z12CbPC.jpg",
+			"https://i.imgur.com/MU7mFfd.jpg"
+		],
+		"banano": [],
+		"video": []
 	}
 ]
