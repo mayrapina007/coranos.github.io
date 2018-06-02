@@ -276,6 +276,10 @@
 		"banano": [
 		],
 		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/oQPu3UA-vs0/default.jpg",
+				"video": "https://www.youtube.com/embed/oQPu3UA-vs0"
+			}
 		]
 	}
 ]
