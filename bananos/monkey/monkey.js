@@ -92,6 +92,12 @@ function updateTime() {
 }
 
 function makeMonkeySvg(gameSelector, images, svgSize, choiceIx) {
+    if((images.left === undefined) && (images.L !== undefined)) {
+      images.left = images.L;
+    }
+    if((images.right === undefined) && (images.R !== undefined)) {
+      images.right = images.R;
+    }
     let svgParent = d3.select(gameSelector);
     if (choiceIx !== undefined) {
         const label = d3.select(gameSelector).append('label').attr('class', 'choiceLabel')
