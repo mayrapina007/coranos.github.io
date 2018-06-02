@@ -239,12 +239,17 @@
 		],
 		"banano": [
 			"https://i.imgur.com/kS78dqa.jpg",
-			"https://i.imgur.com/dayICVK.jpg"
+			"https://i.imgur.com/dayICVK.jpg",
+			"https://i.imgur.com/kGni9vD.png"
 		],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/dzpt9JvRFlA/default.jpg",
 				"video": "https://www.youtube.com/embed/dzpt9JvRFlA"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/5KJJNWkN6gY/default.jpg",
+				"video": "https://www.youtube.com/embed/5KJJNWkN6gY"
 			}
 		]
 	},
