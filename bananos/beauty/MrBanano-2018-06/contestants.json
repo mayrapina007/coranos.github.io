@@ -224,9 +224,26 @@
 			"https://i.imgur.com/DFoHjzC.jpg",
 			"https://i.imgur.com/2KsoyM4.jpg"
 		],
+		"banano": [],
+		"video": []
+	},
+	{
+		"contestant": "16",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 17:39",
+		"discord": "@Algiorno Oficial.#6911",
+		"verification": [
+			"https://i.imgur.com/ZQbILzi.jpg"
+		],
 		"banano": [
+			"https://i.imgur.com/8RUMxea.jpg",
+			"https://i.imgur.com/JgsNLc5.jpg",
+			"https://i.imgur.com/4sH24f7.jpg"
 		],
 		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/jLOiSHm5dLg/default.jpg",
+				"video": "https://www.youtube.com/embed/jLOiSHm5dLg"
+			}
 		]
 	}
 ]
