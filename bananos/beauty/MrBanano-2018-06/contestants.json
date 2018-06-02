@@ -269,7 +269,7 @@
 	{
 		"contestant": "18",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 22:12",
-		"discord": "jacintoelbarouki#7206",
+		"discord": "gruvious#6760",
 		"verification": [
 			"https://i.imgur.com/K7BbBsS.jpg"
 		],
@@ -279,6 +279,23 @@
 			{
 				"thumbnail": "https://img.youtube.com/vi/oQPu3UA-vs0/default.jpg",
 				"video": "https://www.youtube.com/embed/oQPu3UA-vs0"
+			}
+		]
+	},
+	{
+		"contestant": "19",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 9:50",
+		"discord": "gruvious#6760",
+		"verification": [
+			"https://i.imgur.com/R4JaEIH.png"
+		],
+		"banano": [
+		"https://i.imgur.com/MTDMqNT.png"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/cVy7YeeqGZQ/default.jpg",
+				"video": "https://www.youtube.com/embed/cVy7YeeqGZQ"
 			}
 		]
 	}
