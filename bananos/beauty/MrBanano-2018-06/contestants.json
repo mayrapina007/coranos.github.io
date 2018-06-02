@@ -340,5 +340,18 @@
 		],
 		"banano": [],
 		"video": []
+	},
+	{
+		"contestant": "21",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 10:10",
+		"discord": "TUNENE#0351",
+		"verification": [
+			"https://i.imgur.com/i5NJLY2.png"
+		],
+		"banano": [
+			"https://i.imgur.com/lfVrC7p.png"
+		],
+		"video": [
+		]
 	}
 ]
