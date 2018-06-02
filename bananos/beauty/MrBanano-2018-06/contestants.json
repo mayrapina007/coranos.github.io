@@ -259,6 +259,11 @@
 			"https://i.imgur.com/GR7s9Bj.jpg",
 			"https://i.imgur.com/QWnPld2.jpg"
 		],
-		"video": []
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/otpqXb9-cM/default.jpg",
+				"video": "https://www.youtube.com/embed/otpqXb9-cM"
+			}
+		]
 	}
 ]
