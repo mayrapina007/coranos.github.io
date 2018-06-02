@@ -106,7 +106,12 @@
 			"https://i.imgur.com/vnyQYsb.png",
 			"https://i.imgur.com/Ej68FQ3.png"
 		],
-		"video": []
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/jMLyT5w2a2c/default.jpg",
+				"video": "https://www.youtube.com/embed/jMLyT5w2a2c"
+			}
+		]
 	},
 	{
 		"contestant": "6",
