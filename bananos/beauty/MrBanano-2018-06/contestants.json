@@ -351,7 +351,25 @@
 		"banano": [
 			"https://i.imgur.com/lfVrC7p.png"
 		],
+		"video": []
+	},
+	{
+		"contestant": "22",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 10:12",
+		"discord": "CrC#6030",
+		"verification": [
+			"https://i.imgur.com/w1jIFus.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/Ti3Jmpc.jpg",
+			"https://i.imgur.com/ygPBTFY.jpg",
+			"https://i.imgur.com/ie3luDO.jpg"
+		],
 		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/vnjtnjCelAw/default.jpg",
+				"video": "https://www.youtube.com/embed/vnjtnjCelAw"
+			}
 		]
 	}
 ]
