@@ -214,10 +214,18 @@ function setupHtml () {
   tr1.append('th').attr('class','solid_border centered_text').text('Good');
   tr1.append('th').attr('class','solid_border centered_text').text('Bad');
   tr1.append('th').attr('class','solid_border centered_text').text('Total');
+  tr1.append('th').attr('class','solid_border centered_text').text('Tutorial Video')
+  
   const tr2 = table.append('tr');
   tr2.append('th').attr('class','solid_border centered_text').attr('id','goodScore').text('0');
   tr2.append('th').attr('class','solid_border centered_text').attr('id','badScore').text('0');
   tr2.append('th').attr('class','solid_border centered_text').attr('id','totalScore').text('0');
+
+  tr2.append('th').attr('class','solid_border centered_text')
+    .append('a').attr('target','_blank').attr('href','https://www.youtube.com/embed/E23TD-Zwaek')
+    .append('img').attr('src','https://img.youtube.com/vi/E23TD-Zwaek/default.jpg')
+    .style('height','25px')
+    .style('max-width','100%')
 
   body.append('p').text('Game Starts In (Seconds) ').append('span').attr('id','timer').text('??');
   
@@ -240,7 +248,7 @@ function setupHtml () {
   
   const noDiv = accountDiv.append('div');
   noDiv.attr('id','hasAccountFlagNo').append('p').append('b')
-    .text('Please enter a bananos account, then click on the matching monkey.');
+    .text('Please enter a bananos account, then select the square that contains the miniature versions of both large monKeys.');
   noDiv
     .append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
 
