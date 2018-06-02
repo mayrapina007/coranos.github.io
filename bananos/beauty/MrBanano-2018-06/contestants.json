@@ -367,5 +367,24 @@
 				"video": "https://www.youtube.com/embed/XZbNTtrUCXs"
 			}
 		]
+	},
+	
+	{
+		"contestant": "22",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 11:06",
+		"discord": "LuisM#9062",
+		"verification": [
+			"https://i.imgur.com/wk1XYAE.jpg",
+			"https://i.imgur.com/fZ4sLw0.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/SIu2MU9.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/XZbNTtrUCXs/default.jpg",
+				"video": "https://www.youtube.com/embed/XZbNTtrUCXs"
+			}
+		]
 	}
 ]
