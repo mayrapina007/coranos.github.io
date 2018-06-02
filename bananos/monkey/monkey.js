@@ -177,6 +177,9 @@ function newGame() {
         }
         
         updateScore(gameJson.wins,gameJson.losses);
+        d3.select("#winnerStats")
+          .html('number of winners over ' + gameJson.winnerThreshold + ' is ' + gameJson.totalWinners + ' of ' + gameJson.maxWinners);
+
 
         gameJson.expected.prefix = gameJson.prefix;
         makeMonkeySvg(options.gameSelector, gameJson.expected, expectedValueImageSize, undefined);
@@ -226,6 +229,9 @@ function setupHtml () {
     .append('img').attr('src','https://img.youtube.com/vi/E23TD-Zwaek/default.jpg')
     .style('height','25px')
     .style('max-width','100%')
+
+  const tr3 = table.append('tr');
+  tr3.append('th').attr('colspan','4').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
 
   body.append('p').text('Total Bananos Won may not be actual bananos.');
   

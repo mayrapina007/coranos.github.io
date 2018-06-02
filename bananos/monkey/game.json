@@ -1,22 +1,45 @@
 {
 	"wins": 0,
 	"prefix": "https://i.imgur.com/",
+	"winnerThreshold": 1000,
 	"expected": {
-		"left": "5pO5dq7.png",
-		"right": "5pO5dq7.png"
+		"left": "fDL2Ubb.png",
+		"right": "fDL2Ubb.png"
 	},
-	"time": 2000,
-	"slowDownFlag": false,
+	"totalWinners": 0,
 	"accountIsInvalidFlag": true,
+	"time": 5000,
+	"slowDownFlag": false,
 	"losses": 0,
+	"maxWinners": 10,
 	"choices": [
 		{
-			"left": "JTP0UKz.png",
-			"right": "JTP0UKz.png"
+			"left": "5pO5dq7.png",
+			"right": "vpyezNk.png"
 		},
 		{
-			"left": "ERMOMYF.png",
+			"left": "vpyezNk.png",
+			"right": "q4kN3u4.png"
+		},
+		{
+			"left": "q4kN3u4.png",
+			"right": "q4kN3u4.png"
+		},
+		{
+			"left": "fDL2Ubb.png",
 			"right": "ERMOMYF.png"
+		},
+		{
+			"left": "5pO5dq7.png",
+			"right": "q4kN3u4.png"
+		},
+		{
+			"left": "JTP0UKz.png",
+			"right": "fDL2Ubb.png"
+		},
+		{
+			"left": "q4kN3u4.png",
+			"right": "fDL2Ubb.png"
 		},
 		{
 			"left": "fDL2Ubb.png",
@@ -24,19 +47,19 @@
 		},
 		{
 			"left": "5pO5dq7.png",
-			"right": "5pO5dq7.png"
+			"right": "fDL2Ubb.png"
 		},
 		{
 			"left": "JTP0UKz.png",
-			"right": "JTP0UKz.png"
+			"right": "5pO5dq7.png"
 		},
 		{
 			"left": "ERMOMYF.png",
-			"right": "ERMOMYF.png"
+			"right": "5pO5dq7.png"
 		},
 		{
 			"left": "fDL2Ubb.png",
-			"right": "fDL2Ubb.png"
+			"right": "5pO5dq7.png"
 		},
 		{
 			"left": "5pO5dq7.png",
@@ -44,35 +67,15 @@
 		},
 		{
 			"left": "JTP0UKz.png",
-			"right": "JTP0UKz.png"
+			"right": "vpyezNk.png"
 		},
 		{
 			"left": "ERMOMYF.png",
-			"right": "ERMOMYF.png"
+			"right": "vpyezNk.png"
 		},
 		{
 			"left": "fDL2Ubb.png",
-			"right": "fDL2Ubb.png"
-		},
-		{
-			"left": "5pO5dq7.png",
-			"right": "5pO5dq7.png"
-		},
-		{
-			"left": "JTP0UKz.png",
 			"right": "JTP0UKz.png"
-		},
-		{
-			"left": "ERMOMYF.png",
-			"right": "ERMOMYF.png"
-		},
-		{
-			"left": "fDL2Ubb.png",
-			"right": "fDL2Ubb.png"
-		},
-		{
-			"left": "5pO5dq7.png",
-			"right": "5pO5dq7.png"
 		}
 	]
 }
