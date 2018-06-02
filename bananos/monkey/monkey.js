@@ -211,9 +211,9 @@ function setupHtml () {
   const table = body.append('table');
   table.attr('class','solid_border centered_text');
   const tr1 = table.append('tr');
-  tr1.append('th').attr('class','solid_border centered_text').text('Good');
-  tr1.append('th').attr('class','solid_border centered_text').text('Bad');
-  tr1.append('th').attr('class','solid_border centered_text').text('Total');
+  tr1.append('th').attr('class','solid_border centered_text').text('Bananos Won');
+  tr1.append('th').attr('class','solid_border centered_text').text('Bananos Lost');
+  tr1.append('th').attr('class','solid_border centered_text').text('Total Bananos Won');
   tr1.append('th').attr('class','solid_border centered_text').text('Tutorial Video')
   
   const tr2 = table.append('tr');
@@ -227,6 +227,8 @@ function setupHtml () {
     .style('height','25px')
     .style('max-width','100%')
 
+  body.append('p').text('Total Bananos Won may not be actual bananos.');
+  
   body.append('p').text('Game Starts In (Seconds) ').append('span').attr('id','timer').text('??');
   
   body.append('div').attr('id','slowDownFlag').append('p').append('b')
