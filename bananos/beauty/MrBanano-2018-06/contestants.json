@@ -167,6 +167,24 @@
 		]
 	},
 	{
+		"contestant": "9",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 17:00",
+		"discord": "JhonAlvarez#1227",
+		"verification": [
+			"https://i.imgur.com/YJObSjz.jpg",
+			"https://i.imgur.com/cmbunxX.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/i9jqJuC.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/hbTV4-WPAjI/default.jpg",
+				"video": "https://www.youtube.com/embed/hbTV4-WPAjI"
+			}
+		]
+ 	},
+	{
 		"contestant": "10",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:00",
 		"discord": "GreatDragonian#2741",
@@ -368,7 +386,6 @@
 			}
 		]
 	},
-	
 	{
 		"contestant": "22",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 11:06",
@@ -385,6 +402,20 @@
 				"thumbnail": "https://img.youtube.com/vi//default.jpg",
 				"video": "https://www.youtube.com/embed/"
 			}
+		]
+	},
+	{
+		"contestant": "23",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 13:07",
+		"discord": "Team Junglo |Toro Manuel#9143",
+		"verification": [
+			"https://i.imgur.com/z2wWCIg.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/1RWUneO.jpg",
+			"https://i.imgur.com/RyH7xtc.jpg"
+		],
+		"video": [
 		]
 	}
 ]
