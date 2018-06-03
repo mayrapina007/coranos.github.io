@@ -183,7 +183,7 @@
 				"video": "https://www.youtube.com/embed/hbTV4-WPAjI"
 			}
 		]
- 	},
+	},
 	{
 		"contestant": "10",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:00",
@@ -418,12 +418,13 @@
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 12:30",
 		"discord": "masp29#4303",
 		"verification": [
-		],
-		"banano": [
 			"https://i.imgur.com/EdSYChh.jpg"
 		],
-		"video": [
-		]
+		"banano": [
+			"https://i.imgur.com/SwMYKSj.jpg",
+			"https://i.imgur.com/kdPbCsj.jpg"
+		],
+		"video": []
 	},
 	{
 		"contestant": "24",
@@ -436,8 +437,7 @@
 			"https://i.imgur.com/1RWUneO.jpg",
 			"https://i.imgur.com/RyH7xtc.jpg"
 		],
-		"video": [
-		]
+		"video": []
 	},
 	{
 		"contestant": "25",
@@ -446,9 +446,7 @@
 		"verification": [
 			"https://i.imgur.com/pdBvuB3.jpg"
 		],
-		"banano": [
-		],
-		"video": [
-		]
+		"banano": [],
+		"video": []
 	}
 ]
