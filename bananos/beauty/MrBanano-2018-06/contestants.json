@@ -314,7 +314,8 @@
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 17:55",
 		"discord": "jacintoelbarouki#7206",
 		"verification": [
-			"https://i.imgur.com/iTqtbQh.jpg"
+			"https://i.imgur.com/iTqtbQh.jpg",
+			"https://i.imgur.com/szQWhsP.jpg"
 		],
 		"banano": [
 			"https://i.imgur.com/GR7s9Bj.jpg",
@@ -322,8 +323,8 @@
 		],
 		"video": [
 			{
-				"thumbnail": "https://img.youtube.com/vi/IotpqXb9-cM/default.jpg",
-				"video": "https://www.youtube.com/embed/IotpqXb9-cM"
+				"thumbnail": "https://img.youtube.com/vi/NR_8WJnUyO0/default.jpg",
+				"video": "https://www.youtube.com/embed/NR_8WJnUyO0"
 			}
 		]
 	},
