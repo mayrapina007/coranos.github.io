@@ -335,7 +335,9 @@
 		"verification": [
 			"https://i.imgur.com/K7BbBsS.jpg"
 		],
-		"banano": [],
+		"banano": [
+			"https://i.imgur.com/Hu7Z7ZF.jpg"
+		],
 		"video": [
 			{
 				"thumbnail": "https://img.youtube.com/vi/oQPu3UA-vs0/default.jpg",
