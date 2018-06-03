@@ -1,1 +1,0 @@
-#Pet Contest Banano June 2018 - Community Contest - Sponsored by La Jungla
