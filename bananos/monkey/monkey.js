@@ -102,7 +102,7 @@ function makeMonkeySvg(gameSelector, images, svgSize, choiceIx) {
     if (choiceIx !== undefined) {
         const label = d3.select(gameSelector).append('label').attr('class', 'choiceLabel')
         label.append('input')
-            .attr('class', 'image')
+            .attr('class', 'image g-recaptcha')
             .attr('type', 'submit')
             .attr('name', 'choice')
             .attr('value', choiceIx);
