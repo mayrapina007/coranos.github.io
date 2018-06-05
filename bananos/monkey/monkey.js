@@ -52,14 +52,19 @@ function getUrlParameter(sParam) {
 
 function submitForm() {
     synchAccountDisplay();
-    var accountInput = document.getElementById('old-discord');
-    if (accountInput.value.length == 0) {
+    const discordInput = document.getElementById('old-discord');
+    if (discordInput.value.length == 0) {
         document.getElementById('new-discord').style['background-color'] = 'red';
         return false;
     }
-    var accountInput = document.getElementById('old-account');
+    const accountInput = document.getElementById('old-account');
     if (accountInput.value.length == 0) {
         document.getElementById('new-account').style['background-color'] = 'red';
+        return false;
+    }
+    const botInput = document.getElementById('old-bot');
+    if (botInput.value.length == 0) {
+        document.getElementById('new-bot').style['background-color'] = 'red';
         return false;
     }
     if (time > 0) {
@@ -166,16 +171,20 @@ function newGame() {
     
     const urlPrefix = options.urlPrefix;
     var url = urlPrefix;
-    var accountInput = document.getElementById('old-account');
+    const accountInput = document.getElementById('old-account');
     if (accountInput.value.length > 0) {
       url += "?account=" + accountInput.value;
       if(oldClickedIx !== undefined) {
         url += "&choice=" + oldClickedIx;
       }
     }
-    var discordInput = document.getElementById('old-discord');
+    const discordInput = document.getElementById('old-discord');
     if (discordInput.value.length > 0) {
       url += "?discord=" + discordInput.value;
+    }
+    const botInput = document.getElementById('old-bot');
+    if (botInput.value.length > 0) {
+      url += "?bot=" + botInput.value;
     }
     
     $.getJSON(url, function(gameJson) {
@@ -227,6 +236,7 @@ function newGame() {
 function synchAccountDisplay() {
   synchDiscordDisplay();
   synchBananoAccountDisplay();
+  synchBotDisplay();
 }
 
 function synchBananoAccountDisplay() {
@@ -256,12 +266,14 @@ function synchDiscordDisplay() {
 }
 
 function synchBotDisplay() {
+    var account = d3.select('#new-account').node().value;
+    var discord = d3.select('#new-discord').node().value;
     var bot = d3.select('#new-bot').node().value;
-    if (bot.length == 0) {
+    if ((account.length == 0) || (discord.length == 0) || (bot.length == 0)) {
       d3.select('#hasBotFlagYes').style('display', 'none');
       d3.select('#hasBotFlagNo').style('display', 'block');
     } else {
-      d3.select('#old-discord').node().value = bot;
+      d3.select('#old-bot').node().value = bot;
       d3.select('#bot-text').html(bot);
       d3.select('#hasBotFlagYes').style('display', 'block');
       d3.select('#hasBotFlagNo').style('display', 'none');
