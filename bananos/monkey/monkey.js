@@ -51,6 +51,11 @@ function getUrlParameter(sParam) {
 
 function submitForm() {
     synchAccountDisplay();
+    var accountInput = document.getElementById('old-discord');
+    if (accountInput.value.length == 0) {
+        document.getElementById('new-discord').style['background-color'] = 'red';
+        return false;
+    }
     var accountInput = document.getElementById('old-account');
     if (accountInput.value.length == 0) {
         document.getElementById('new-account').style['background-color'] = 'red';
@@ -103,6 +108,8 @@ function makeMonkeySvg(gameSelector, images, svgSize, choiceIx) {
         const label = d3.select(gameSelector).append('label').attr('class', 'choiceLabel')
         label.append('input')
             .attr('class', 'image g-recaptcha')
+            .attr('data-sitekey', '6LfBNF0UAAAAABYz6krMPLcySKX8rv3I53E3DvVC')
+            .attr('data-callback', 'submitForm')
             .attr('type', 'submit')
             .attr('name', 'choice')
             .attr('value', choiceIx);
