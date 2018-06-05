@@ -1,4 +1,4 @@
-const clientVersion = "1.0.0";
+const clientVersion = '1.0.0';
 const expectedValueImageSize = 600;
 const choiceValueImageSize = 150;
 
@@ -173,17 +173,17 @@ function newGame() {
     var url = urlPrefix;
     const accountInput = document.getElementById('old-account');
     if (accountInput.value.length > 0) {
-      url += "?account=" + accountInput.value;
+      url += '?account=' + accountInput.value;
       if(oldClickedIx !== undefined) {
-        url += "&choice=" + oldClickedIx;
+        url += '&choice=' + oldClickedIx;
       }
       const discordInput = document.getElementById('old-discord');
       if (discordInput.value.length > 0) {
-        url += "&discord=" + discordInput.value;
+        url += '&discord=' + discordInput.value;
       }
       const botInput = document.getElementById('old-bot');
       if (botInput.value.length > 0) {
-        url += "&bot=" + botInput.value;
+        url += '&bot=' + botInput.value;
       }
     }
     
@@ -206,7 +206,7 @@ function newGame() {
         }
         
         updateScore(gameJson.wins,gameJson.losses);
-        d3.select("#winnerStats")
+        d3.select('#winnerStats')
           .html('number of winners over ' + gameJson.winnerThreshold + ' is ' + gameJson.totalWinners + ' of ' + gameJson.maxWinners);
 
 
@@ -266,9 +266,9 @@ function synchDiscordDisplay() {
 }
 
 function synchBotDisplay() {
-    var account = d3.select('#old-account').node().value;
-    var discord = d3.select('#old-discord').node().value;
-    var bot = d3.select('#new-bot').node().value;
+    const account = d3.select('#old-account').node().value;
+    const discord = d3.select('#old-discord').node().value;
+    const bot = d3.selectAll('#new-bot:checked').node().value;
     if ((account.length == 0) || (discord.length == 0) || (bot.length == 0)) {
       alert('account :'+account+';'+'discord :'+discord+';'+'bot :'+bot+';');
       d3.select('#hasBotFlagYes').style('display', 'none');
@@ -380,7 +380,7 @@ function addBotDivs(accountDiv) {
   yesBot.append('span').text('i am a bot');
   noBot.append('input').attr('id','new-bot').attr('type','radio').attr('name','bot').attr('value','no');
   noBot.append('span').text('i am not a bot');
-  maybeBot.append('input').attr('id','new-bot').attr('type','radio').attr('name','bot').attr('value','maybe').attr('checked','true');
+  maybeBot.append('input').attr('id','new-bot').attr('type','radio').attr('name','bot').attr('value','maybe').attr('checked',true);
   maybeBot.append('span').text('i am not sure');
 }
 
