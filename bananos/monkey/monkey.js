@@ -173,7 +173,11 @@ function newGame() {
         url += "&choice=" + oldClickedIx;
       }
     }
-
+    var discordInput = document.getElementById('old-discord');
+    if (discordInput.value.length > 0) {
+      url += "?discord=" + discordInput.value;
+    }
+    
     $.getJSON(url, function(gameJson) {
         d3.select('#serverVersion').html(gameJson.serverVersion);
         if (gameJson.slowDownFlag === false) {
@@ -251,6 +255,19 @@ function synchDiscordDisplay() {
     }
 }
 
+function synchBotDisplay() {
+    var bot = d3.select('#new-bot').node().value;
+    if (bot.length == 0) {
+      d3.select('#hasBotFlagYes').style('display', 'none');
+      d3.select('#hasBotFlagNo').style('display', 'block');
+    } else {
+      d3.select('#old-discord').node().value = bot;
+      d3.select('#bot-text').html(bot);
+      d3.select('#hasBotFlagYes').style('display', 'block');
+      d3.select('#hasBotFlagNo').style('display', 'none');
+    }
+}
+
 function setupHtml () {
   const body = d3.select('#body');
   const table = body.append('table');
@@ -297,6 +314,7 @@ function setupHtml () {
   
   addDiscordDivs(accountDiv);
   addAccountDivs(accountDiv);
+  addBotDivs(accountDiv);
 
   const gameDiv = form.append('div');
   gameDiv.style('width','600px').style('height','600px').attr('id','game');
@@ -326,6 +344,31 @@ function addDiscordDivs(accountDiv) {
     .text('Please enter a discord id.');
   noDiscordDiv
     .append('input').attr('id','new-discord').attr('type','text').attr('name','discord').attr('value','').attr('size','64');
+}
+
+function addBotDivs(accountDiv) {
+  const yesBotDiv = accountDiv.append('div');
+  yesBotDiv.attr('id','hasBotFlagYes').append('p').append('b')
+    .text('bot: ').append('span').attr('id','bot-text').text('??');
+  yesBotDiv.append('input').attr('id','old-bot').attr('type','hidden').attr('name','bot').attr('value','');
+  
+  const noBotDiv = accountDiv.append('div');
+  noBotDiv.attr('id','hasBotFlagNo').append('p').append('b').text('Please say if you are a bot.');
+  
+  const table = noBotDiv.append('table');
+  table.attr('class','solid_border centered_text');
+  const tr1 = table.append('tr');
+
+  const yesBot = tr1.append('th').attr('class','solid_border centered_text');
+  const noBot = tr1.append('th').attr('class','solid_border centered_text');
+  const maybeBot = tr1.append('th').attr('class','solid_border centered_text');
+  
+  yesBot.append('input').attr('id','new-bot').attr('type','radio').attr('name','bot').attr('value','yes');
+  yesBot.append('span').text('i am a bot');
+  noBot.append('input').attr('id','new-bot').attr('type','radio').attr('name','bot').attr('value','no');
+  noBot.append('span').text('i am not a bot');
+  maybeBot.append('input').attr('id','new-bot').attr('type','radio').attr('name','bot').attr('value','maybe').attr('checked','true');
+  maybeBot.append('span').text('i am not sure');
 }
 
 function onLoad (urlPrefix) {
