@@ -1,4 +1,4 @@
-const clientVersion = '1.0.2';
+const clientVersion = '1.0.3';
 const expectedValueImageSize = 600;
 const choiceValueImageSize = 150;
 
@@ -282,6 +282,9 @@ function synchBotDisplay() {
 
 function setupHtml () {
   const body = d3.select('#body');
+  
+  body.attr('class','monospace');
+  
   const table = body.append('table');
   table.attr('class','solid_border centered_text');
   const tr1 = table.append('tr');

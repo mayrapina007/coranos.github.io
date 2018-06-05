@@ -4,6 +4,11 @@
   font-family: monospace;
 }
 
+.monospace {
+  font-family: monospace;
+  font-size: 1.em;
+}
+
 .centered_text {
   text-align: center;
 }
