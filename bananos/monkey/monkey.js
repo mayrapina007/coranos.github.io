@@ -189,6 +189,7 @@ function newGame() {
     
     $.getJSON(url, function(gameJson) {
         d3.select('#serverVersion').html(gameJson.serverVersion);
+        d3.select('#bytesUsed').html(gameJson.bytes_used);
         if (gameJson.slowDownFlag === false) {
           d3.select('#slowDownFlag').style('display', 'none');
         }
@@ -294,6 +295,7 @@ function setupHtml () {
   tr1.append('th').attr('class','solid_border centered_text').text('Tutorial Video')
   tr1.append('th').attr('class','solid_border centered_text').text('Client Version')
   tr1.append('th').attr('class','solid_border centered_text').text('Server Version')
+  tr1.append('th').attr('class','solid_border centered_text').text('Bytes Used')
   
   const tr2 = table.append('tr');
   tr2.append('th').attr('class','solid_border centered_text').attr('id','goodScore').text('0');
@@ -308,6 +310,7 @@ function setupHtml () {
 
   tr2.append('th').attr('class','solid_border centered_text').attr('id','clientVersion').text(clientVersion);
   tr2.append('th').attr('class','solid_border centered_text').attr('id','serverVersion').text('??');
+  tr2.append('th').attr('class','solid_border centered_text').attr('id','bytesUsed').text('0');
     
   const tr3 = table.append('tr');
   tr3.append('th').attr('colspan','6').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
