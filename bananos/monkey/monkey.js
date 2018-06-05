@@ -1,3 +1,4 @@
+const clientVersion = "1.0.0";
 const expectedValueImageSize = 600;
 const choiceValueImageSize = 150;
 
@@ -174,6 +175,7 @@ function newGame() {
     }
 
     $.getJSON(url, function(gameJson) {
+        d3.select('#serverVersion').html(gameJson.serverVersion);
         if (gameJson.slowDownFlag === false) {
           d3.select('#slowDownFlag').style('display', 'none');
         }
@@ -258,6 +260,8 @@ function setupHtml () {
   tr1.append('th').attr('class','solid_border centered_text').text('Bananos Lost');
   tr1.append('th').attr('class','solid_border centered_text').text('Total Bananos Won');
   tr1.append('th').attr('class','solid_border centered_text').text('Tutorial Video')
+  tr1.append('th').attr('class','solid_border centered_text').text('Client Version')
+  tr1.append('th').attr('class','solid_border centered_text').text('Server Version')
   
   const tr2 = table.append('tr');
   tr2.append('th').attr('class','solid_border centered_text').attr('id','goodScore').text('0');
@@ -270,6 +274,9 @@ function setupHtml () {
     .style('height','25px')
     .style('max-width','100%')
 
+  tr2.append('th').attr('class','solid_border centered_text').attr('id','clientVersion').text(clientVersion);
+  tr2.append('th').attr('class','solid_border centered_text').attr('id','serverVersion').text('??');
+    
   const tr3 = table.append('tr');
   tr3.append('th').attr('colspan','4').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
 

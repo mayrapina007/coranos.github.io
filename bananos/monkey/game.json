@@ -1,4 +1,5 @@
 {
+	"serverVersion" : "static",
 	"wins": 0,
 	"prefix": "https://i.imgur.com/",
 	"winnerThreshold": 1000,
