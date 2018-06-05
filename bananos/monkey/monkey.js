@@ -212,6 +212,11 @@ function newGame() {
 }
 
 function synchAccountDisplay() {
+  synchDiscordDisplay();
+  synchBananoAccountDisplay();
+}
+
+function synchBananoAccountDisplay() {
     var account = d3.select('#new-account').node().value;
     if (account.length == 0) {
       d3.select('#hasAccountFlagYes').style('display', 'none');
@@ -221,6 +226,19 @@ function synchAccountDisplay() {
       d3.select('#account-text').html(account);
       d3.select('#hasAccountFlagYes').style('display', 'block');
       d3.select('#hasAccountFlagNo').style('display', 'none');
+    }
+}
+
+function synchDiscordDisplay() {
+    var discord = d3.select('#new-discord').node().value;
+    if (discord.length == 0) {
+      d3.select('#hasDiscordFlagYes').style('display', 'none');
+      d3.select('#hasDiscordFlagNo').style('display', 'block');
+    } else {
+      d3.select('#old-discord').node().value = discord;
+      d3.select('#discord-text').html(discord);
+      d3.select('#hasDiscordFlagYes').style('display', 'block');
+      d3.select('#hasDiscordFlagNo').style('display', 'none');
     }
 }
 
@@ -263,20 +281,37 @@ function setupHtml () {
   const accountDiv = form.append('div');
   accountDiv.attr('style','width: 600px');
   
-  
-  const yesDiv = accountDiv.append('div');
-  yesDiv.attr('id','hasAccountFlagYes').append('p').append('b')
-    .text('Account: ').append('span').attr('id','account-text').text('??');
-  yesDiv.append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
-  
-  const noDiv = accountDiv.append('div');
-  noDiv.attr('id','hasAccountFlagNo').append('p').append('b')
-    .text('Please enter a bananos account, then select the square that contains the miniature versions of both large monKeys.');
-  noDiv
-    .append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
+  addDiscordDivs(accountDiv);
+  addAccountDivs(accountDiv);
 
   const gameDiv = form.append('div');
   gameDiv.style('width','600px').style('height','600px').attr('id','game');
+}
+
+function addAccountDivs(accountDiv) {
+  const yesAccountDiv = accountDiv.append('div');
+  yesAccountDiv.attr('id','hasAccountFlagYes').append('p').append('b')
+    .text('Account: ').append('span').attr('id','account-text').text('??');
+  yesAccountDiv.append('input').attr('id','old-account').attr('type','hidden').attr('name','account').attr('value','');
+  
+  const noAccountDiv = accountDiv.append('div');
+  noAccountDiv.attr('id','hasAccountFlagNo').append('p').append('b')
+    .text('Please enter a bananos account, then select the square that contains the miniature versions of both large monKeys.');
+  noAccountDiv
+    .append('input').attr('id','new-account').attr('type','text').attr('name','account').attr('value','').attr('size','64');
+}
+
+function addDiscordDivs(accountDiv) {
+  const yesDiscordDiv = accountDiv.append('div');
+  yesDiscordDiv.attr('id','hasDiscordFlagYes').append('p').append('b')
+    .text('discord: ').append('span').attr('id','discord-text').text('??');
+  yesDiscordDiv.append('input').attr('id','old-discord').attr('type','hidden').attr('name','discord').attr('value','');
+  
+  const noDiscordDiv = accountDiv.append('div');
+  noDiscordDiv.attr('id','hasDiscordFlagNo').append('p').append('b')
+    .text('Please enter a discord id.');
+  noDiscordDiv
+    .append('input').attr('id','new-discord').attr('type','text').attr('name','discord').attr('value','').attr('size','64');
 }
 
 function onLoad (urlPrefix) {
