@@ -313,7 +313,7 @@ function setupHtml () {
   tr2.append('th').attr('class','solid_border centered_text').attr('id','bytesUsed').text('0');
     
   const tr3 = table.append('tr');
-  tr3.append('th').attr('colspan','6').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
+  tr3.append('th').attr('colspan','7').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
 
   body.append('p').text('Total Bananos Won may not be actual bananos.');
   
