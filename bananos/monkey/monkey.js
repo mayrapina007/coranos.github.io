@@ -177,14 +177,14 @@ function newGame() {
       if(oldClickedIx !== undefined) {
         url += "&choice=" + oldClickedIx;
       }
-    }
-    const discordInput = document.getElementById('old-discord');
-    if (discordInput.value.length > 0) {
-      url += "?discord=" + discordInput.value;
-    }
-    const botInput = document.getElementById('old-bot');
-    if (botInput.value.length > 0) {
-      url += "?bot=" + botInput.value;
+      const discordInput = document.getElementById('old-discord');
+      if (discordInput.value.length > 0) {
+        url += "&discord=" + discordInput.value;
+      }
+      const botInput = document.getElementById('old-bot');
+      if (botInput.value.length > 0) {
+        url += "&bot=" + botInput.value;
+      }
     }
     
     $.getJSON(url, function(gameJson) {
@@ -266,10 +266,11 @@ function synchDiscordDisplay() {
 }
 
 function synchBotDisplay() {
-    var account = d3.select('#new-account').node().value;
-    var discord = d3.select('#new-discord').node().value;
+    var account = d3.select('#old-account').node().value;
+    var discord = d3.select('#old-discord').node().value;
     var bot = d3.select('#new-bot').node().value;
     if ((account.length == 0) || (discord.length == 0) || (bot.length == 0)) {
+      alert('account :'+account+';'+'discord :'+discord+';'+'bot :'+bot+';');
       d3.select('#hasBotFlagYes').style('display', 'none');
       d3.select('#hasBotFlagNo').style('display', 'block');
     } else {
