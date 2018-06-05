@@ -1,82 +1,82 @@
 {
-	"serverVersion" : "static",
 	"wins": 0,
-	"prefix": "https://i.imgur.com/",
+	"serverVersion": "static",
+	"prefix": "https://coranos.github.io/banano-finder-images/images/",
 	"winnerThreshold": 1000,
 	"expected": {
-		"left": "fDL2Ubb.png",
-		"right": "fDL2Ubb.png"
+		"R": "42666.png",
+		"L": "50192.png"
 	},
 	"totalWinners": 0,
 	"accountIsInvalidFlag": true,
-	"time": 5000,
+	"time": 3000,
 	"slowDownFlag": false,
 	"losses": 0,
 	"maxWinners": 10,
 	"choices": [
 		{
-			"left": "5pO5dq7.png",
-			"right": "vpyezNk.png"
+			"R": "92230.png",
+			"L": "34784.png"
 		},
 		{
-			"left": "vpyezNk.png",
-			"right": "q4kN3u4.png"
+			"R": "20772.png",
+			"L": "3643.png"
 		},
 		{
-			"left": "q4kN3u4.png",
-			"right": "q4kN3u4.png"
+			"R": "92026.png",
+			"L": "49491.png"
 		},
 		{
-			"left": "fDL2Ubb.png",
-			"right": "ERMOMYF.png"
+			"R": "42666.png",
+			"L": "92303.png"
 		},
 		{
-			"left": "5pO5dq7.png",
-			"right": "q4kN3u4.png"
+			"R": "13241.png",
+			"L": "8449.png"
 		},
 		{
-			"left": "JTP0UKz.png",
-			"right": "fDL2Ubb.png"
+			"R": "64204.png",
+			"L": "85484.png"
 		},
 		{
-			"left": "q4kN3u4.png",
-			"right": "fDL2Ubb.png"
+			"R": "50544.png",
+			"L": "84250.png"
 		},
 		{
-			"left": "fDL2Ubb.png",
-			"right": "fDL2Ubb.png"
+			"R": "84054.png",
+			"L": "44280.png"
 		},
 		{
-			"left": "5pO5dq7.png",
-			"right": "fDL2Ubb.png"
+			"R": "99283.png",
+			"L": "10658.png"
 		},
 		{
-			"left": "JTP0UKz.png",
-			"right": "5pO5dq7.png"
+			"R": "18375.png",
+			"L": "85484.png"
 		},
 		{
-			"left": "ERMOMYF.png",
-			"right": "5pO5dq7.png"
+			"R": "99283.png",
+			"L": "93633.png"
 		},
 		{
-			"left": "fDL2Ubb.png",
-			"right": "5pO5dq7.png"
+			"R": "82985.png",
+			"L": "44280.png"
 		},
 		{
-			"left": "5pO5dq7.png",
-			"right": "5pO5dq7.png"
+			"R": "48638.png",
+			"L": "8449.png"
 		},
 		{
-			"left": "JTP0UKz.png",
-			"right": "vpyezNk.png"
+			"R": "52364.png",
+			"L": "3643.png"
 		},
 		{
-			"left": "ERMOMYF.png",
-			"right": "vpyezNk.png"
+			"R": "41725.png",
+			"L": "21165.png"
 		},
 		{
-			"left": "fDL2Ubb.png",
-			"right": "JTP0UKz.png"
+			"R": "74975.png",
+			"L": "44280.png"
 		}
 	]
 }

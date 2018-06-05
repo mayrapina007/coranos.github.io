@@ -1,4 +1,4 @@
-const clientVersion = '1.0.1';
+const clientVersion = '1.0.2';
 const expectedValueImageSize = 600;
 const choiceValueImageSize = 150;
 
@@ -270,7 +270,6 @@ function synchBotDisplay() {
     const discord = d3.select('#old-discord').node().value;
     const bot = d3.selectAll('#new-bot:checked').node().value;
     if ((account.length == 0) || (discord.length == 0) || (bot.length == 0)) {
-      alert('account :'+account+';'+'discord :'+discord+';'+'bot :'+bot+';');
       d3.select('#hasBotFlagYes').style('display', 'none');
       d3.select('#hasBotFlagNo').style('display', 'block');
     } else {
@@ -308,7 +307,7 @@ function setupHtml () {
   tr2.append('th').attr('class','solid_border centered_text').attr('id','serverVersion').text('??');
     
   const tr3 = table.append('tr');
-  tr3.append('th').attr('colspan','4').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
+  tr3.append('th').attr('colspan','6').attr('class','solid_border centered_text').attr('id','winnerStats').text('??');
 
   body.append('p').text('Total Bananos Won may not be actual bananos.');
   
