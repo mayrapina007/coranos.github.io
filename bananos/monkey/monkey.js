@@ -50,6 +50,11 @@ function getUrlParameter(sParam) {
     }
 };
 
+function submitCapchaForm(token) {
+  alert('capcha ' + token);
+  return submitForm();
+}
+
 function submitForm() {
     synchAccountDisplay();
     const discordInput = document.getElementById('old-discord');
@@ -114,8 +119,9 @@ function makeMonkeySvg(gameSelector, images, svgSize, choiceIx) {
         const label = d3.select(gameSelector).append('label').attr('class', 'choiceLabel')
         label.append('input')
             .attr('class', 'image g-recaptcha')
-            .attr('data-sitekey', '6LfBNF0UAAAAABYz6krMPLcySKX8rv3I53E3DvVC')
-            .attr('data-callback', 'submitForm')
+            .attr('data-sitekey', '6LdHNV0UAAAAAB2syUYlN022EIk3-ZhcUfwois-4')
+            .attr('data-callback', 'submitCapchaForm')
+            .attr('data-size', 'invisible')
             .attr('type', 'submit')
             .attr('name', 'choice')
             .attr('value', choiceIx);
@@ -139,10 +145,15 @@ function makeMonkeySvg(gameSelector, images, svgSize, choiceIx) {
         svgSize / 2);
 
     svg.append('rect').attr('x', 1).attr('y', 1).attr('height', svgSize - 1).attr('width', svgSize - 1).attr('pointer-events', 'visible')
-        .attr('onclick', 'clickedIx=' + choiceIx)
+        .attr('onclick', 'return clickedRect('+choiceIx+')')
         .style('stroke', 'red')
         .style('fill', 'none').style('stroke-width', 1);
 
+}
+
+function clickedRect(choiceIx) {
+  clickedIx= + choiceIx;
+  grecaptcha.execute();
 }
 
 function makeGame(gameOptions) {
@@ -231,6 +242,14 @@ function newGame() {
         }
         timeIntervalId= setInterval(updateTime, 100);
         updateTime();
+        
+        
+        d3.selectAll(".g-recaptcha").each(function(d, i) {
+          const node = d3.select(this).node();
+          grecaptcha.render(node);
+        });
+        
+        grecaptcha.reset();
     });
 }
 
