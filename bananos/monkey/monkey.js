@@ -195,7 +195,6 @@ function newGame(token) {
       if (botInput.value.length > 0) {
         url += '&bot=' + botInput.value;
       }
-      alert('token' + token);
       if(token !== undefined) {
         url += '&captcha=' + token;
       }
