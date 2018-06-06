@@ -51,11 +51,10 @@ function getUrlParameter(sParam) {
 };
 
 function submitCapchaForm(token) {
-  alert('capcha ' + token);
-  return submitForm();
+  return submitForm(token);
 }
 
-function submitForm() {
+function submitForm(token) {
     synchAccountDisplay();
     const discordInput = document.getElementById('old-discord');
     if (discordInput.value.length == 0) {
@@ -77,7 +76,7 @@ function submitForm() {
         timeDiv.style['background-color'] = 'red';
         return false;
     }
-    newGame();
+    newGame(token);
     return false;
 }
 
@@ -161,7 +160,7 @@ function makeGame(gameOptions) {
   newGame();
 }
 
-function newGame() {
+function newGame(token) {
     const oldClickedIx = clickedIx;
     clickedIx = undefined;
 
@@ -195,6 +194,10 @@ function newGame() {
       const botInput = document.getElementById('old-bot');
       if (botInput.value.length > 0) {
         url += '&bot=' + botInput.value;
+      }
+      alert('token' + token);
+      if(token !== undefined) {
+        url += '&captcha=' + token;
       }
     }
     
