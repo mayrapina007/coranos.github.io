@@ -175,11 +175,6 @@
         });
 
         $.getJSON('judges-votes.json', function (results) {
-          for (const [judge, votes] of Object.entries(results)) {
-            if(votes.length == 0) {
-              delete results[judge];
-            }
-          }
           
           let contestantTable = $('#contestantTable').find('tbody');
           contestantTable.empty();
@@ -253,6 +248,12 @@
           const judgesRow = makeRow(judgesResponse, judgesTableOptions, 'solid_border centered_text', 'solid_border centered_text');
           judgesTable.append(judgesRow);
           
+
+          for (const [judge, votes] of Object.entries(results)) {
+            if(votes.length == 0) {
+              delete results[judge];
+            }
+          }
           
           const winnerTable = $('#winnerTable').find('tbody');
           winnerTable.empty();
