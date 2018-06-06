@@ -158,6 +158,12 @@
         });
 
         $.getJSON('judges-votes.json', function (results) {
+          for (const [judge, votes] of Object.entries(results)) {
+            if(votes.length == 0) {
+              delete results[judge];
+            }
+          }
+          
           let contestantTable = $('#contestantTable').find('tbody');
           contestantTable.empty();
           const contestantResponse = {};
@@ -235,8 +241,6 @@
           judgementTable.empty();
           const judgementResponse = {};
           judgementResponse.results = [];
-
-          const eliminatedContestantSet = new Set();
           
           const pushJudgementRow = (category,description) => {
             const responseRow = {};
@@ -246,6 +250,8 @@
             judgementResponse.results.push(responseRow);
           };
           
+          const winners = new Set();
+          
           const places = [];
           places.push('First');
           places.push('Second');
@@ -254,6 +260,9 @@
           const rounds = [];
           rounds.push('One');
           rounds.push('Two');
+          rounds.push('Three');
+          rounds.push('Four');
+          rounds.push('Five');
 
           for(var placeIx = 0; placeIx < places.length; placeIx++) {
             pushJudgementRow('Placement','<h1>' + places[placeIx] + ' Place</h1>');
@@ -265,6 +274,48 @@
               activeRankForJudges[judge] = 1;
             }
             
+            const getActiveContestant = (judge, votes) => {
+              const activeRank = activeRankForJudges[judge];
+              var contestant;
+              votes.forEach(function (vote) {
+                const rank = vote.rank;
+                if(rank == activeRank) {
+                  contestant = vote.contestant;
+                }
+              });
+              return contestant;
+            };
+            
+            const incrementJudgePreference = (judge) => {
+              const oldRank = activeRankForJudges[judge];
+              const oldContestant = getActiveContestant(judge, results[judge]);
+              activeRankForJudges[judge] ++;
+              while(winners.has(getActiveContestant(judge, results[judge]))) {
+                activeRankForJudges[judge] ++;
+              }
+              const newRank = activeRankForJudges[judge];
+              const newContestant = getActiveContestant(judge, results[judge]);
+          	  pushJudgementRow('Judge Updating', 'updated ' + judge
+          	    + ' from [' + oldRank + ']' + oldContestant
+                + ' to [' + newRank + ']' + newContestant
+          	  );
+            }
+            
+            const incrementJudgesPreference = (judges) => {
+              judges.forEach(incrementJudgePreference);
+            };
+            
+            for(var ix = 0; ix < winners.size; ix++) {
+              for (const [judge, votes] of Object.entries(results)) {
+                const contestant = getActiveContestant(judge, votes);
+                if(winners.has(contestant)) {
+                  activeRankForJudges[judge] ++;
+                  const newContestant = getActiveContestant(judge, votes);
+               	  pushJudgementRow('Winner Contestant Skipping', 'updated ' + judge + ' from ' + contestant + ' to ' + newContestant);
+                }
+              }
+            }
+            
             for(var roundIx = 0; (roundIx < rounds.length) && (winner === undefined); roundIx++) {
               pushJudgementRow('Scoring Round','<h2>Round ' + rounds[roundIx] + '</h2>');
               const judgesForContestants = {};
@@ -272,29 +323,24 @@
               const judgeVotes = Object.entries(results);
 
               for (const [judge, votes] of judgeVotes) {
-                votes.forEach(function (vote) {
-                  const activeRank = activeRankForJudges[judge];
-                  const rank = vote.rank;
-                  if(rank == activeRank) {
-                    const contestant = vote.contestant;
-                    if(!eliminatedContestantSet.has(contestant)) {
-                      if(judgesForContestants[contestant] === undefined) {
-                        judgesForContestants[contestant] = [];
-                      }
-                      judgesForContestants[contestant].push(judge);
-                    	pushJudgementRow('Judge Choice', 'Judge ' + judge + ' voted for ' + contestant + ' rank ' + activeRank);
-                    }
-                  }
-                })
+                const activeRank = activeRankForJudges[judge];
+                const contestant = getActiveContestant(judge, votes);
+                if(judgesForContestants[contestant] === undefined) {
+                  judgesForContestants[contestant] = [];
+                }
+                judgesForContestants[contestant].push(judge);
+              	pushJudgementRow('Judge Choice', 'Judge ' + judge + ' voted for ' + contestant + ' rank ' + activeRank);
               }
               
               const entries = Object.entries(judgesForContestants);
-              var lowestVoteCount = judgeVotes.length;
+              const totalVoteCount = judgeVotes.length;
+              var lowestVoteCount = totalVoteCount;
 
               for (const [contestant, judges] of entries) {
                 const votes = judges.length;
-                if(votes >= (judgeVotes.length / 2)) {
+                if(votes >= (totalVoteCount / 2)) {
                   winner = contestant;
+               	  winners.add(winner);
                 }
                 if(votes < lowestVoteCount) {
                   lowestVoteCount = votes;
@@ -304,9 +350,9 @@
               for (const [contestant, judges] of entries) {
                 const votes = judges.length;
                 if(contestant == winner) {
-                	pushJudgementRow('WINNER', '<b>WINNER ' + votes + ' of ' + judgeVotes.length + ' for ' + contestant + '</b>');
+                	pushJudgementRow('WINNER', '<b>WINNER ' + votes + ' of ' + totalVoteCount + ' for ' + contestant + '</b>');
                 } else {
-                	pushJudgementRow('Also Ran', votes + ' of ' + judgeVotes.length + ' for ' + contestant);
+                	pushJudgementRow('Also Ran', votes + ' of ' + totalVoteCount + ' for ' + contestant);
                 }
               }
               
@@ -315,20 +361,14 @@
                   const votes = judges.length;
                   if(votes == lowestVoteCount) {
                   	pushJudgementRow('Loser Elimination', 'eliminating ' + contestant + ' from future rounds as they have lowest votes (' + votes + ').');
-                    eliminatedContestantSet.add(contestant);
-                    judges.forEach(function (judge) {
-                      activeRankForJudges[judge] ++;
-                    });
+                  	incrementJudgesPreference(judges);
                   }
                 }
               } else {
               	pushJudgementRow('Winner Elimination', 'eliminating ' + winner + ' from future rounds as they won.');
-                eliminatedContestantSet.add(winner);
                 for (const [contestant, judges] of entries) {
                   if(contestant == winner) {
-                    judges.forEach(function (judge) {
-                      activeRankForJudges[judge] ++;
-                    });
+                  	incrementJudgesPreference(judges);
                   }
                 }
               }
