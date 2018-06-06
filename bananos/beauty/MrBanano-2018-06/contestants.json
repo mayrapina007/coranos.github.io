@@ -346,23 +346,6 @@
 		]
 	},
 	{
-		"contestant": "19",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 9:50",
-		"discord": "banandalf#2521 (Disqualified, no professional photos)",
-		"verification": [
-			"https://i.imgur.com/R4JaEIH.png"
-		],
-		"banano": [
-			"https://i.imgur.com/MTDMqNT.png"
-		],
-		"video": [
-			{
-				"thumbnail": "https://img.youtube.com/vi/cVy7YeeqGZQ/default.jpg",
-				"video": "https://www.youtube.com/embed/cVy7YeeqGZQ"
-			}
-		]
-	},
-	{
 		"contestant": "20",
 		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 9:58",
 		"discord": "DAGO#2780",
@@ -413,19 +396,6 @@
 				"video": "https://www.youtube.com/embed/kLIg1t2_RnE"
 			}
 		]
-	},
-	{
-		"contestant": "23",
-		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 12:30",
-		"discord": "masp29#4303  (Disqualified, ID Photo has no face)",
-		"verification": [
-			"https://i.imgur.com/EdSYChh.jpg"
-		],
-		"banano": [
-			"https://i.imgur.com/SwMYKSj.jpg",
-			"https://i.imgur.com/kdPbCsj.jpg"
-		],
-		"video": []
 	},
 	{
 		"contestant": "24",
