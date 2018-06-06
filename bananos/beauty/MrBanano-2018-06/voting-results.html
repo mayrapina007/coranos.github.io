@@ -73,6 +73,13 @@
     <li>If there is still not a majority winner due to ties, reset the elimination votes, and combine the next lower rank's votes with the top rank (I.E.
       if the votes in Rank 1 are : {A:3,B:3,C:2}, you eliminate C, and get {A:4,B:4}, reset to {A:3,B:3,C:2} and pull in rank 2.)</li>
   </ol>
+  <h2>winnerTable</h2>
+  <table id='winnerTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
   <h2>judgementTable</h2>
   <table id='judgementTable' class='solid_border' style="width: 100%">
     <thead class='solid_border'>
@@ -109,6 +116,13 @@
       callGoogleTracker();
 
       function onLoad () {
+        jsonTable('#winnerTable', {
+          head : [ 'Log Ix','Category','Description'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
         jsonTable('#judgementTable', {
           head : [ 'Log Ix','Category','Description'],
           thClass : 'solid_border centered_text',
@@ -136,6 +150,9 @@
           trClass : 'solid_border',
           sortTable : false
         });
+
+        let winnerTableOptions = {};
+        winnerTableOptions.json = [ 'ix', 'category', 'description' ];
 
         let judgementTableOptions = {};
         judgementTableOptions.json = [ 'ix', 'category', 'description' ];
@@ -236,11 +253,24 @@
           const judgesRow = makeRow(judgesResponse, judgesTableOptions, 'solid_border centered_text', 'solid_border centered_text');
           judgesTable.append(judgesRow);
           
-
-          let judgementTable = $('#judgementTable').find('tbody');
+          
+          const winnerTable = $('#winnerTable').find('tbody');
+          winnerTable.empty();
+          const winnerResponse = {};
+          winnerResponse.results = [];
+          
+          const judgementTable = $('#judgementTable').find('tbody');
           judgementTable.empty();
           const judgementResponse = {};
           judgementResponse.results = [];
+          
+          const pushWinnerRow = (category,description) => {
+            const responseRow = {};
+            responseRow.ix = winnerResponse.results.length + 1;
+            responseRow.category = category;
+            responseRow.description = description;
+            winnerResponse.results.push(responseRow);
+          };
           
           const pushJudgementRow = (category,description) => {
             const responseRow = {};
@@ -255,7 +285,14 @@
           const places = [];
           places.push('First');
           places.push('Second');
-          // places.push('third');
+          places.push('Third');
+          places.push('Fourth');
+          places.push('Fifth');
+          places.push('Sixth');
+          places.push('Seventh');
+          places.push('Eigth');
+          places.push('Ninth');
+          places.push('Tenth');
 
           const rounds = [];
           rounds.push('One');
@@ -263,6 +300,26 @@
           rounds.push('Three');
           rounds.push('Four');
           rounds.push('Five');
+          rounds.push('Six');
+          rounds.push('Seven');
+          rounds.push('Eight');
+          rounds.push('Nine');
+          rounds.push('Ten');
+          rounds.push('Eleven');
+          rounds.push('Twelve');
+          rounds.push('Thirteen');
+          rounds.push('Fourteen');
+          rounds.push('Fifteen');
+          rounds.push('Sixteen');
+          rounds.push('Seventeen');
+          rounds.push('Eighteen');
+          rounds.push('Ninteen');
+          rounds.push('Twenty');
+          rounds.push('Twenty One');
+          rounds.push('Twenty Two');
+          rounds.push('Twenty Three');
+          rounds.push('Twenty Four');
+          rounds.push('Twenty Five');
 
           for(var placeIx = 0; placeIx < places.length; placeIx++) {
             pushJudgementRow('Placement','<h1>' + places[placeIx] + ' Place</h1>');
@@ -350,7 +407,9 @@
               for (const [contestant, judges] of entries) {
                 const votes = judges.length;
                 if(contestant == winner) {
-                	pushJudgementRow('WINNER', '<b>WINNER ' + votes + ' of ' + totalVoteCount + ' for ' + contestant + '</b>');
+                  	const description = '<b>WINNER ' + places[placeIx] + ' Place ' + votes + ' of ' + totalVoteCount + ' for ' + contestant + '</b>';
+                	pushJudgementRow('WINNER', description);
+                	pushWinnerRow('WINNER',description);
                 } else {
                 	pushJudgementRow('Also Ran', votes + ' of ' + totalVoteCount + ' for ' + contestant);
                 }
@@ -378,6 +437,8 @@
           const judgementRow = makeRow(judgementResponse, judgementTableOptions, 'solid_border centered_text', 'solid_border centered_text');
           judgementTable.append(judgementRow);
 
+          const winnerRow = makeRow(winnerResponse, winnerTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          winnerTable.append(winnerRow);
         });
       }
     </script>
