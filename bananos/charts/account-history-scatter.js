@@ -57,8 +57,8 @@ function showScatter(response) {
   });
 
   // Scale the range of the data
-  x.domain(d3.extent(data, function(d) { return Math.log10(d.tx+1); }));
-  y.domain([0, d3.max(data, function(d) { return Math.log10(d.balance); })]);
+  x.domain(d3.extent(data, function(d) { return (d.tx+1); }));
+  y.domain([0, d3.max(data, function(d) { return (d.balance); })]);
 
   // Add the valueline path.
   svg.append("path")
@@ -71,8 +71,8 @@ function showScatter(response) {
       .data(data)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("cx", function(d) { return x(Math.log10(d.tx+1)); })
-      .attr("cy", function(d) { return y(Math.log10(d.balance)); })
+      .attr("cx", function(d) { return x((d.tx+1)); })
+      .attr("cy", function(d) { return y((d.balance)); })
       .append("svg:title")
       .text(function(d) { return d.account; });
 
