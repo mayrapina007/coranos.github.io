@@ -1,10 +1,10 @@
 // set the dimensions and margins of the graph
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
+var margin = {top: 20, right: 20, bottom: 30, left: 100},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 // set the ranges
-var x = d3.scaleTime().range([0, width]);
+var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 // define the line
@@ -41,11 +41,7 @@ function showScatter(response) {
     if(dataElt.tx > 0) {
       if(dataElt.balance > 0) {
         data.push(dataElt);
-      } else {
-        console.log('balance', JSON.stringify(dataElt));
       }
-    } else {
-      console.log('tx', JSON.stringify(dataElt));
     }
   });
 
