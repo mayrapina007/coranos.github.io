@@ -125,9 +125,9 @@
 			"pt": "Os vencedores serão determinados pelo sistema de eleição (Instant Runoff Voting)."
 		},
 		{
-			"en": "33% of the pot is first prize, 22% second prize, 14% third prize, 11% fourth prize, 10% fifth prize, and then all participants share the remaining 10%.",
-			"es": "50% del pote lo gana el primer lugar, 25% para el segundo lugar, 12.5% para el tercer lugar, y entre todos los participantes se repartirá el remanente 12.5%.",
-			"pt": "50% do total arrecadado é do primeiro lugar, 25% do segundo lugar, 12,5% do terceiro lugar, e então todos os outros participantes compartilharão os 12,5% restantes."
+			"en": "33% of the pot is for the first place, 22% second place, 14% third place, 11% fourth place, 10% fifth place, and the rest of the participants share the remaining 10%.",
+			"es": "El 33% del pote es para el primer lugar, 22% segundo lugar, 14% tercer lugar, 11% cuarto lugar, 10% quinto lugar, y el resto de los participantes comparten el 10% restante.",
+			"pt": "33% do pote é para o primeiro lugar, 22% para o segundo lugar, 14% para o terceiro lugar, 11% para o quarto lugar, 10% para o quinto lugar, e os demais participantes compartilham os 10% restantes."
 		},
 		{
 			"en": "The judge's votes will be published publicly for verification.",
