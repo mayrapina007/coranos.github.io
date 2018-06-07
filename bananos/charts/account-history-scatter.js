@@ -33,21 +33,32 @@ function showScatter(response) {
   // format the data
   const data = [];
   
+  const whales = new Set();
+//  whales.add('ban_1fundm3d7zritekc8bdt4oto5ut8begz6jnnt7n3tdxzjq3t46aiuse1h7gj');
+//  whales.add('ban_3fundbxxzrzfy3k9jbnnq8d44uhu5sug9rkh135bzqncyy9dw91dcrjg67wf');
+//  whales.add('ban_3runnerrxm74165sfmystpktzsyp7eurixwpk59tejnn8xamn8zog18abrda');
+//  whales.add('ban_1bonusncatu5rsrctx1djmgrragfwpj4ujsk939utmtdwskhtiourh8997eh');
+//  whales.add('ban_1fund7g391gz9mjr9wuqjzcb68omnt5jjznw7at54sart79uadhe6ih81fuq');
+//  whales.add('ban_3redditpxsum1uizb8o8is9kau7uckzpts7oddoz6j4gzorxc8eaodkjzxqb');
+//  whales.add('ban_3disc5557sb9ri99h7czmn6ms5kcfsafnsxekarg1pp9f3a1ik4ndjcb9cod');
+//  whales.add('ban_1ce1ery6hqwyqqyh15m4atcoaywd8rycyapjjooqeg7gi149kmatjbb3wiwx');
+//  whales.add('ban_3twitegseiodhntduw76t3gsoqsn1ooo4dhpc5p6r5bqx8phbufdr876odh3');
+  
   response.results.forEach(function(d) {
     const dataElt = {};
     dataElt.account = d.account;
     dataElt.tx = Object.entries(d.history).length;
     dataElt.balance = +d.balance;
-    if(dataElt.tx > 0) {
-      if(dataElt.balance > 0) {
+    if(dataElt.balance > 0) {
+      if(!whales.has(dataElt.account)) {
         data.push(dataElt);
       }
     }
   });
 
   // Scale the range of the data
-  x.domain(d3.extent(data, function(d) { return (d.tx); }));
-  y.domain([0, d3.max(data, function(d) { return (d.balance); })]);
+  x.domain(d3.extent(data, function(d) { return Math.log10(d.tx+1); }));
+  y.domain([0, d3.max(data, function(d) { return Math.log10(d.balance); })]);
 
   // Add the valueline path.
   svg.append("path")
@@ -60,8 +71,10 @@ function showScatter(response) {
       .data(data)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("cx", function(d) { return x((d.tx)); })
-      .attr("cy", function(d) { return y((d.balance)); });
+      .attr("cx", function(d) { return x(Math.log10(d.tx+1)); })
+      .attr("cy", function(d) { return y(Math.log10(d.balance)); })
+      .append("svg:title")
+      .text(function(d) { return d.account; });
 
   // Add the X Axis
   svg.append("g")
